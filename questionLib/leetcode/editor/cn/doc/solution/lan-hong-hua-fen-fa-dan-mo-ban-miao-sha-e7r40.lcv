@@ -1,0 +1,652 @@
+### 前言
+
+二分查找分为查找 ＜ 、≤ 、= 、≥ 、＞ 目标元素及符合各种自定义条件的结果，数组中元素还可能有重复，大大加大了查找难度，于是二分查找的模板变得五花八门，非常不方便记忆，有没有一套相对便于理解的模板通杀所有二分查找题呢，居然有！
+
+最近在逛B站学习的时候发现了一个宝藏up主：五点七边，里面提供了一个极好的解二分查找的思路。
+
+**特此声明：本文模板非原创，核心内容均转自B站 五点七边 ，本人主要进行整理论述优化，代码展示和模板运用。**
+
+此外，目前二分查找主流的有**六套模板**，2022年5月20日，我也进行了系统整理和归纳总结：
+[六款二分查找模板，哪款才是你的菜？](https://leetcode.cn/circle/discuss/ObmjbJ/)
+并且我用所有模板对 [704. 二分查找](https://leetcode.cn/problems/binary-search/) 和 [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/) 全部进行了模板使用，同学们可以自行比对。
+所有模板几乎适用于所有场景，同学们可以根据自己的喜好选择常用模板。
+
+虽然蓝红二分法不是唯一的二分查找模板，但是蓝红二分法的二分建模思路非常值得学习！
+
+在深入理解二分查找的原理后，同学们甚至可以自创二分查找模板进行解题，模板只是思想的具象化体现，想要达到完全抛弃模板随心所欲的**无招胜有招**境界，掌握二分查找模板中蕴含的**二分思想**是第一步，下面就从学习蓝红二分法开始吧！
+
+### 正文
+
+#### 模板讲解
+
+这套模板和常规的模板存在不一样：
+主体思路：$l$ 指针掌管左边蓝色区域， $r$ 指针掌管右边红色区域，两者互不冲突，通过不断向目标元素靠近扩大掌管区域，直到两者掌管区域接壤，即 $l + 1 == r$ 时终止。
+
+1. 开始时，$l$ 指针和 $r$ 指针取在搜索区间界外，$l = 首个元素下标 - 1$，$r = 末尾元素下标 + 1$，此时所有元素均未着色；
+2. 循环条件始终为 $l + 1 ≠ r$ ，当 $l + 1 == r$ 时跳出循环，此时蓝红区域划分完成，所有元素均已着色；
+3. $mid$ 指针取值始终为 $mid = \lfloor (l + r) / 2 \rfloor$ ;
+4. $l$ 指针和 $r$ 指针变化的时候直接变为 $mid$ 指针，即对 $mid$ 指针所指向元素进行染色，无需 $+1$ 或者 $-1$ ；
+
+本模板唯一变化的地方是判断目标元素最终落在左边蓝色区域还是右边红色区域。
+
+**以不变应万变，强到爆有木有！**
+
+附视频链接：
+[二分查找为什么总是写错？](https://www.bilibili.com/video/BV1d54y1q7k7)
+
+附图片讲解：
+**蓝色**标记**左边**区域，浅蓝色边框代表元素尚未着色，蓝色边框代表元素已经着色；
+**红色**标记**右边**区域，浅红色边框代表元素尚未着色，红色边框代表元素已经着色；
+
+二分查找起始状态：
+![Screen Shot 2021-08-30 at 3.35.42 PM.png](https://pic.leetcode-cn.com/1630310528-IFpwYQ-Screen%20Shot%202021-08-30%20at%203.35.42%20PM.png)
+二分查找终止状态：
+![Screen Shot 2021-08-30 at 3.35.10 PM.png](https://pic.leetcode-cn.com/1630310560-HUqxWR-Screen%20Shot%202021-08-30%20at%203.35.10%20PM.png)
+＜ 、≤ 、≥ 、＞ 目标元素 $target$ 对应的蓝红区域划分：
+![Screen Shot 2021-08-30 at 3.33.56 PM.png](https://pic.leetcode-cn.com/1630310623-eiwQWm-Screen%20Shot%202021-08-30%20at%203.33.56%20PM.png)
+说明：＜ 、≤在左边蓝色区域找，≥ 、＞在右边红色区域找，目标元素 $target$ 分配给能够包含 = 情况的区域。
+① ＜ 不包含 = 情况，右侧则为 ≥ 能够包含 = 情况，所以在左边蓝色区域找，目标元素 $target$ 分配在右边红色区域最左侧；
+② ≤ 包含 = 情况，所以在左边蓝色区域找，目标元素 $target$ 分配在左边蓝色区域最右侧；
+③ ＞ 不包含 = 情况，左侧则为 ≤ 能够包含 = 情况，所以在右边红色区域找，目标元素 $target$ 分配在左边蓝色区域最右侧；
+④ ≥ 包含 = 情况，所以在右边红色区域找，目标元素 $target$ 分配在右边红色区域最左侧；
+拓展一下，= 的情况能不能套用这个模板呢，当然可以，归纳为 ≤ 或者 ≥ 处理就行。
+附最经典的二分查找题和本人题解：
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [704. 二分查找](https://leetcode.cn/problems/binary-search/) | [704. 蓝红二分法二分查找目标元素](https://leetcode.cn/problems/binary-search/solution/by-sui-xin-yuan-l5o9/) | 二分查找 |
+
+蓝红区域的划分方案最终是由程序员确定的，在思考解决方案的过程中，蓝红区域的划分方案有可能有多种，但是我们应该尽量**选择最优划分方案**，这非常考验程序员的建模能力！
+![Screen Shot 2022-03-19 at 10.12.14 PM.png](https://pic.leetcode-cn.com/1647699179-JddFzm-Screen%20Shot%202022-03-19%20at%2010.12.14%20PM.png)
+
+#### 模板备注
+
+此部分内容为本人原创，是经过本人摸索后发掘的强大的实战经验，是此模板很好的补充，同样值得学习。
+① 模板中的二分判断
+
+* 
+
+```
+if isBlue(m)
+    l = m
+else
+    r = m
+```
+
+也可写为
+
+* 
+
+```
+if isRed(m)
+    r = m
+else
+    l = m
+```
+
+哪个便捷选哪个。
+
+② 模板中循环条件判断也可写为 $l + 1 < r$，在不能保证 $l + 1 < r$ 在初始状态成立的情况下，就不能写 $l + 1 ≠ r$，这里情况下写成 $l + 1 ≠ r$ 是因为这里默认在一个区间上进行二分查找，不会出现$l + 1 > r$的情况，判等判不等操作肯定比判 $l + 1 < r$ 即判大于小于快的（自行回忆计算机组成原理相关知识点或者自行模拟两种操作的位运算），其实没必要抠细节到这么细。
+但保险起见，在 $l$ 指针和 $r$ 指针跨数组或者跨区间的情况下，建议统一采用 $l + 1 < r$ 。
+或者直接采用 $l + 1 < r$ 。
+附此备注二分查找例题和本人题解：
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [1855. 下标对中的最大距离](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/)     |  [1855. 逐步缩小二分查找区间](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/solution/zhu-bu-suo-xiao-er-fen-cha-zhao-qu-jian-gjuja/) | 二分查找 |
+
+③ 下标边界对应迭代器说明：
+开始时，$l$ 指针和 $r$ 指针取在搜索区间界外，另一个重要作用就是构造了下标边界。
+如果搜索的是整个 $nums$ 数组，设数组长度为 $n$ ，搜索下标范围 $[0, \:n-1]$ ，则 $l = -1$ 对应迭代器 $prev(nums.begin())$，则 $r = n$ 对应迭代器 $nums.end()$ 。
+拓展一下，如果搜索的是 $nums$ 数组中的 $[a,\:b]$ 区间，其中 $[a,\:b] \subseteq [0, \:n-1]$ ，则 $l = a-1$ 对应迭代器 $prev(nums.begin()+a)$ 或 $nums.begin()+a-1$，则 $r = b+1$ 对应迭代器 $nums.begin()+b+1$ 。
+下标边界比迭代器写法更简洁，判断更方便，运行速度也更快，非常强大。
+附此备注二分查找例题和本人题解：
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/) | [300. 根据处理策略决定蓝红划分方案](https://leetcode.cn/problems/longest-increasing-subsequence/solution/gen-by-sui-xin-yuan-5xhy/) | 贪心 + 二分查找 |
+
+④ 搜索完毕后的特殊状态：
+若二分查找 $while$ 循环跳出后 $l == 首个元素下标 - 1$ ，即整个搜索区间都被染成红色，即左边蓝色区域长度为 $0$ ，如果搜索目标位于左边蓝色区域，则搜索结果不存在，一般需要进行后处理。
+若二分查找 $while$ 循环跳出后 $r == 末尾元素下标 + 1$ ，即整个搜索区间都被染成蓝色，即右边红色区域长度为 $0$ ，如果搜索目标位于右边红色区域，则搜索结果不存在，一般需要进行后处理。
+
+⑤ 普通技巧：
+以下技巧必须掌握：
+**排序**
+二分查找的运用是建立在数组有序的基础上的，如果数组无序，我们要先对数组进行排序，如果数组有多个维度，我们针对需要二分查找的维度进行排序。
+**构造二分查找区间**
+当问题能够转化为区间内二分判定问题的时候，构造搜索区间，在蓝红二分法中，设 $l$ 指针初始为 $l_0$，$r$ 指针初始为 $r_0$，二分查找结束时，$l$ 指针终止为 $l_t$，$r$ 指针终止为 $r_t$，$l_0 \le l_t < r_t \le r_0$ 恒成立，同时 $target \in [l_t,\:r_t] \subseteq [l_0,\:r_0]$，双指针 $l$ 和 $r$ 始终对目标元素 $target$ 进行夹逼，这是一条非常重要的性质。
+如果开始构造搜索区间没有思路的时候，直接用**题目提示中的数值区间**！
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [69. x 的平方根](https://leetcode.cn/problems/sqrtx/)     | [69. 构造区间进行二分查找](https://leetcode.cn/problems/sqrtx/solution/by-sui-xin-yuan-dfn3/)   | 二分查找 |
+
+⑥ 高阶技巧：
+**逐步缩小二分查找区间**
+在**二维有序的查找**中，一般采用 **线性查找（外层）+ 二分查找（内层）** 或 **二分查找（外层）+ 二分查找（内层）** 方案，在有序的情况下，对每一次内层的二分查找，$前一次蓝色区间 \subset 当前蓝色区间$，当前 $l$ 指针初始位置可以继承前一次二分查找完毕 $l$ 指针的最终位置，同理，$前一次红色区间 \subset 当前红色区间$，当前 $r$ 指针初始位置可以继承前一次二分查找完毕 $r$ 指针的最终位置。当然无法继承的指针需要进行重置。
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [1855. 下标对中的最大距离](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/)     |  [1855. 逐步缩小二分查找区间](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/solution/zhu-bu-suo-xiao-er-fen-cha-zhao-qu-jian-gjuja/)  | 二分查找 |
+| [1300. 转变数组后最接近目标值的数组和](https://leetcode.cn/problems/sum-of-mutated-array-closest-to-target/) | [1300. 多重二分查找 + 多维度二分查找，官方题解优化](https://leetcode.cn/problems/sum-of-mutated-array-closest-to-target/solution/duo-by-sui-xin-yuan-vn81/) | 排序 + 前缀和 + 二分查找 |
+缩小二分查找区间长度有效缩小二分查找时间，这个技巧虽然不能降低时间复杂度，但是平均每次二分查找区间长度降为原来的一半。
+
+如果就是对同一区间进行 $n$ 次循环，最后一次二分查找 $\log_2\cfrac{n}{2^x} \ge 0$ ，解得 $x = \lfloor \log_2 n \rfloor$ 。
+
+$\log_2n + \log_2\cfrac{n}{2} + \log_2\cfrac{n}{2^2} + ... + \log_2\cfrac{n}{2^{\lfloor \log_2 n \rfloor}} + (n - 1 - \lfloor \log_2 n \rfloor)$
+$=\lfloor \log_2 n \rfloor\log_2n - \cfrac{\lfloor \log_2 n \rfloor(\lfloor \log_2 n \rfloor+1)}{2} + (n - 1 - \lfloor \log_2 n \rfloor)$
+$≈\log_2^2n + n - \log_2 n$
+总时间复杂度降为 $O(\log^2n) + O(n)$ ，即 $O(n)$，如果不进行优化时间复杂度就是 $O(n\log n)$ ，优化效果明显。
+我画图说明这个优化效果：
+![nloop.png](https://pic.leetcode-cn.com/1656078971-lnyOhY-nloop.png)
+每轮搜索全区间时间复杂度恒为 $O(\log n)$，$n$ 轮总时间复杂度 $O(n \log n)$；
+逐步缩小搜索区间最后缩小的不能再缩小了就变成了常量级别长度的区间时间复杂度 $O(1)$ ，$n$ 轮总时间复杂度 $O(n)$；
+目前本人题解仍以$n$ 轮总时间复杂度 $O(n \log n)$计。
+
+进一步拓展，设有 $m$ 次循环，这里分情况讨论：
+
+情况一：如果 $m-1 < \lfloor \log_2 n \rfloor$ ，则总时间复杂度为：
+$\log_2n + \log_2\cfrac{n}{2} + \log_2\cfrac{n}{2^2} + ... + \log_2\cfrac{n}{2^{m-1}}$
+$=\log_2n^m - \cfrac{m(m-1)}{2}$
+$=m\log_2n - \cfrac{m(m-1)}{2} < \cfrac{log^2n}{2}$
+总时间复杂度缩小了 $\cfrac{m(m-1)}{2}$，仍近似为 $O(m\log n)$，这里 $m$ 过小优化效果不明显。
+如果不进行优化时间复杂度为 $O(m\log n)$。
+
+情况二：如果 $m-1 \ge \lfloor \log_2 n \rfloor$ ，
+$\log_2n + \log_2\cfrac{n}{2} + \log_2\cfrac{n}{2^2} + ... + \log_2\cfrac{n}{2^{\lfloor \log_2 n \rfloor}} + (m - 1 - \lfloor \log_2 n \rfloor)$
+$≈\log_2^2n + m - \log_2 n$
+总时间复杂度降为 $O(\log^2n) + O(m)$ ，即 $O(m)$，如果不进行优化时间复杂度就是 $O(m\log n)$ ，优化效果明显。
+
+⑦ 蓝红二分法在实数集上的模板：
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [786. 第 K 个最小的素数分数](https://leetcode.cn/problems/k-th-smallest-prime-fraction/) | [786. 实数集上的蓝红二分法](https://leetcode.cn/problems/k-th-smallest-prime-fraction/solution/by-sui-xin-yuan-2zwh/) | 二分查找 |
+
+### 代码
+
+我们实战运用下这个模板，这里就拿这道二分查找裸题验证一下吧！
+
+* []
+
+```C++
+class Solution {
+public:
+    int binarySearchLeft(vector<int>& nums, int target) {
+        int l=-1, r=(int)nums.size();
+        while (l+1!=r) {
+            int mid = l+(r-l)/2;
+            if(nums[mid]>=target) {
+                r = mid;
+            } else {
+                l = mid;
+            }
+        }
+        return r;
+    }
+
+    int binarySearchRight(vector<int>& nums, int target) {
+        int l=-1, r=(int)nums.size();
+        while (l+1!=r) {
+            int mid = l+(r-l)/2;
+            if(nums[mid]<=target) {
+                l = mid;
+            } else {
+                r = mid;
+            }
+        }
+        return l;
+    }
+
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int leftIdx = binarySearchLeft(nums, target);
+        int rightIdx = binarySearchRight(nums, target);
+        if(leftIdx<=rightIdx && rightIdx<nums.size() && nums[leftIdx]==target && nums[rightIdx]==target) {
+            return {leftIdx, rightIdx};
+        }
+        return {-1, -1};
+    }
+};
+```
+
+* []
+
+```Java
+class Solution {
+    public int binarySearchLeft(int[] nums, int target) {
+        int left = -1, right = nums.length;
+        while (left+1 != right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] >= target) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        return right;
+    }
+
+    public int binarySearchRight(int[] nums, int target) {
+        int left = -1, right = nums.length;
+        while (left+1 != right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] <= target) {
+                left = mid;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    public int[] searchRange(int[] nums, int target) {
+        int leftIdx = binarySearchLeft(nums, target);
+        int rightIdx = binarySearchRight(nums, target);
+        if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] == target && nums[rightIdx] == target) {
+            return new int[]{leftIdx, rightIdx};
+        }
+        return new int[]{-1, -1};
+    }
+}
+```
+
+* []
+
+```JavaScript
+const binarySearchLeft = (nums, target) => {
+    let left = -1, right = nums.length;
+    while (left+1 != right) {
+        const mid = Math.floor((left + right) / 2);
+        if (nums[mid] >= target) {
+            right = mid;
+        } else {
+            left = mid;
+        }
+    }
+    return right;
+}
+
+const binarySearchRight = (nums, target) => {
+    let left = -1, right = nums.length;
+    while (left+1 != right) {
+        const mid = Math.floor((left + right) / 2);
+        if (nums[mid] > target) {
+            right = mid
+        } else {
+            left = mid;
+        }
+    }
+    return left;
+}
+
+var searchRange = function(nums, target) {
+    let ans = [-1, -1];
+    const leftIdx = binarySearchLeft(nums, target);
+    const rightIdx = binarySearchRight(nums, target);
+    if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] === target && nums[rightIdx] === target) {
+        ans = [leftIdx, rightIdx];
+    } 
+    return ans;
+};
+```
+
+* []
+
+```Python3
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        def binarySearchLeft(nums:List[int], target:int)->List[int]:
+            l = -1
+            r = len(nums)
+            while l+1 != r :
+                mid = l+(r-l)//2
+                if nums[mid] >= target :
+                    r = mid
+                else :
+                    l = mid
+            return r
+        
+        def binarySearchRight(nums:List[int], target:int)->List[int]:
+            l = -1
+            r = len(nums)
+            while l+1 != r :
+                mid = l+(r-l)//2
+                if nums[mid] <= target :
+                    l = mid
+                else :
+                    r = mid
+            return l
+        
+        leftIdx = binarySearchLeft(nums, target)
+        rightIdx = binarySearchRight(nums, target)
+
+        if leftIdx<=rightIdx and rightIdx<len(nums) and nums[leftIdx]==target and nums[rightIdx]==target :
+            return [leftIdx, rightIdx]
+
+        return [-1, -1]
+```
+
+* []
+
+```Swift
+class Solution {
+    func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
+        let leftIdx = binarySearchLeft(nums,target)
+        let rightIdx = binarySearchRight(nums,target)
+        if(leftIdx<=rightIdx&&rightIdx<nums.count&&nums[leftIdx]==target&&nums[rightIdx]==target) {
+            return [leftIdx,rightIdx];
+        }
+        return [-1, -1]
+    }
+
+    func binarySearchLeft(_ nums: [Int], _ target: Int) -> Int {
+        var left = -1
+        var right = nums.count
+        while left+1 != right {
+            let mid = left + (right - left) / 2
+             if nums[mid] >= target {
+                right = mid
+            } else if nums[mid] < target {
+                left = mid
+            }
+        }
+        return right
+    }
+
+    func binarySearchRight(_ nums: [Int], _ target: Int) -> Int {
+        var left = -1
+        var right = nums.count
+        while left+1 != right {
+            let mid = left + (right - left) / 2
+            if nums[mid] > target {
+                right = mid
+            } else {
+                left = mid
+            }
+        }
+        return left
+    }
+}
+```
+
+* []
+
+```Kotlin
+class Solution {
+    fun binarySearchLeft(nums: IntArray, target: Int): Int {
+        var l = -1
+        var r = nums.size
+        while (l+1 != r) {
+            val m = l + (r - l) / 2
+            if (nums[m] < target) {
+                l = m
+            } else {
+                r = m
+            }
+        }
+        return r
+    }
+
+    fun binarySearchRight(nums: IntArray, target: Int): Int {
+        var l = -1
+        var r = nums.size
+        while (l+1 != r) {
+            val m = l + (r - l) / 2
+            if (nums[m] <= target) {
+                l = m
+            } else {
+                r = m
+            }
+        }
+        return l
+    }
+
+    fun searchRange(nums: IntArray, target: Int): IntArray? {
+        val leftIdx = binarySearchLeft(nums, target)
+        val rightIdx = binarySearchRight(nums, target)
+        if(leftIdx<=rightIdx && rightIdx<nums.size && nums[leftIdx]==target && nums[rightIdx]==target) {
+            return intArrayOf(leftIdx, rightIdx)
+        }
+        return intArrayOf(-1, -1)
+    }
+}
+```
+
+当然，我们也可如up主所说直接调用C++ STL库函数秒杀：
+
+* []
+
+```C++
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        if (nums.empty()) {
+            return {-1, -1};
+        }
+        int leftIdx = lower_bound(nums.begin(), nums.end(), target)-nums.begin();
+        int rightIdx = upper_bound(nums.begin(), nums.end(), target)-1-nums.begin();
+        if(leftIdx<=rightIdx && rightIdx<nums.size() && nums[leftIdx]==target && nums[rightIdx]==target) {
+            return {leftIdx, rightIdx};
+        }
+        return {-1, -1};
+    }
+};
+```
+
+结果完全正确！
+
+补充一版递归版代码：
+
+* []
+
+```C++
+class Solution {
+public:
+    int binarySearchLeft(vector<int>& nums, int left, int right, int target) {
+        if (left + 1 > right) {
+            return -1;
+        }
+        if (left + 1 == right) {
+            return right;
+        }
+        int mid = left + (right - left) / 2;
+        if (nums[mid] >= target) {
+            return binarySearchLeft(nums, left, mid, target);
+        } else {
+            return binarySearchLeft(nums, mid, right, target);
+        }
+    }
+
+    int binarySearchRight(vector<int>& nums, int left, int right, int target) {
+        if (left + 1 > right) {
+            return -1;
+        }
+        if (left + 1 == right) {
+            return left;
+        }
+        int mid = left + (right - left) / 2;
+        if (nums[mid] > target) {
+            return binarySearchRight(nums, left, mid, target);
+        } else {
+            return binarySearchRight(nums, mid, right, target);
+        }
+    }
+
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int leftIdx = binarySearchLeft(nums, -1, (int)nums.size(), target);
+        int rightIdx = binarySearchRight(nums, -1, (int)nums.size(),target);
+        if(leftIdx <= rightIdx && rightIdx < nums.size() && nums[leftIdx] == target && nums[rightIdx] == target) {
+            return {leftIdx, rightIdx};
+        }
+        return {-1, -1};
+    }
+};
+```
+
+### 总结
+
+本人已将此模板在力扣上百道二分查找题上进行实践，全部可行。
+目前仅发现一种情况需要进行特殊处理，就是开始就需要和左右指针指向的元素进行比对，比如旋转数组相关题，附题目链接和本人题解：
+| 题目 | 题解 | 方法 |
+| :----- | ------ | ------ |
+| [154. 寻找旋转排序数组中的最小值 II](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/) | [154. 蓝红二分法分左右](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/solution/by-sui-xin-yuan-p55d/) | 二分查找 |
+此题与 $剑指 Offer 11. 旋转数组的最小数字$ 题目相同。
+由于此模板开始的时候左右指针位于数组界外，直接取值会造成数组越界报错。
+这时候我们需要**手动构造数组边界或者进行越界处理**，此模板完美适配所有二分查找题！
+
+**如有同学发现此模板不能适配的题欢迎留言或者私信，我一定努力想办法破解。**
+
+留下本人的一点思考，我并不知道起初发明这个算法的作者是谁，但溯源其思想其实就是**二分思想**和**染色法**的运用，染色法的好处就是一目了然，界限分明，也是这个二分查找模板相比其他二分查找模板的优点所在！传统二分法在官方题解和其它高赞题解中均有详细说明。
+
+本人简单对比总结如下：
+
+| 传统二分法（双指针法） | 蓝红二分法（双指针+染色法） |
+| ------ | ------ |
+|  优点：<br>1. 双指针指向元素始终不会越界。<br>2. 有多套模板适配不同情形，基本实现全部类型覆盖。<br>3. 在全程闭区间（左闭右闭）二分查找中表现稳定。  | 优点：<br>1. 方便记忆，生动形象，界限分明，每步查找均能完成区间着色。<br>2. 如果二分查找完毕后指针不越界，大多数情况下指针指向的元素即为最终结果。<br>3. 初始状态完成下标边界构造，方便进行下标越界处理；同时解决了传统二分法元素不存在需要再后处理中额外进行越界判断的问题，极大精简代码。 <br>4. 能够二分查找空数组。<br>5. 设 $l$ 指针初始为 $l_0$，$r$ 指针初始为 $r_0$，二分查找结束时，$l$ 指针终止为 $l_t$，$r$ 指针终止为 $r_t$，$l_0 \le l_t < r_t \le r_0$ 恒成立，同时 $target \in [l_t,\:r_t] \subseteq [l_0,\:r_0]$，双指针 $l$ 和 $r$ 始终对目标元素 $target$ 进行夹逼，这是一条非常重要的性质。|
+|  缺点：<br>1. 变化多端，非常复杂，如：<br>① 左右指针的冲突判定：`while l < r` 或 `while l <= r` 等；<br>② $mid$ 指针的取值：`mid = (l+r)/2` 或 `mid = (l+r+1)/2` 等；<br>③ 判定后左右指针变化： `l = mid` 或 `l = mid + 1` 与 `r = mid` 或 `r = mid - 1` ，即是否要进行向`+1`向右一步探索或`-1`向左一步探索偏移；<br>这三点都要格外注意，开始阶段左右指针位于界内，已进入需要判定状态；<br>2. 指针指向元素不一定是最终结果元素，可能需要单独开一个变量在查找过程中记录最终结果。 <br>3.如果二分查找结果不存在必须要在后处理中进行额外的越界判断。<br>4. 不能二分查找空数组。 <br>5. 双指针终止状态不一定能对目标元素进行夹逼，双指针最终可能会处于重合或者交错状态。| 缺点：<br>1. 处理开始阶段需要和左右指针指向元素进行比对的问题（比如旋转数组相关题），需要手动构造数组边界或者进行越界处理，否则会出现数组越界报错； |
+| 共同点：<br>1. 均运用了二分思想；<br>2. 均运用了双指针；<br>3. 均在二分查找完毕后可能需要进行后处理。 | |
+
+表格中传统二分法的缺点和蓝红二分法的优点一一对应。
+蓝红二分法优点太多，缺点目前为止就找到一个，爱了爱了，居家旅行必备之良品啊！
+
+二分思想和染色法也可运用在二分图相关问题中，附题目链接：
+[785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/)
+那么进一步拓展，除了二分，我们也可以用染色法解决三分，四分，五分，甚至 $n$ 分问题。
+
+算法归根结底就是一种思想的实践，但这种思想真的是变幻无穷！
+
+### 模板运用
+
+由于到现在为止发现其他题没有题解是用这个模板作答的，我打算慢慢把其它题用这个二分查找模板进行解答的帖子做出来，让大家深入体会一下这个二分查找模板的强大之处！这个模板非常值得被推广！
+
+由于题目过多（目前总计200多题），这里进行了整体迁移。
+
+[二分查找模块全解](https://leetcode.cn/circle/article/xYBtLt/)
+
+此贴将长期维护和更新！
+
+### 模板证明
+
+由于有同学质疑此模板的正确性，我尝试进行相对严谨的数学证明：
+由模板的初始条件及 $if\:else$ 二分判定可知，$l$ 指针始终位于左边蓝色区域， $r$ 指针始终位于右边红色区域，两者互不冲突，由于区间长度由 1 至 ∞ (区间长度为 0 即没有任何元素则无需搜索)，
+我们用归纳法进行证明，设蓝色区域右边端点位于 $x$，则红色区域左边端点位于 $x+1$，
+① $l$ 与 $r$ 相差为 $1$ 的情况，若 $l=x$ 且 $r=x+1$，$l+1=r$成立，表示查找完成；
+② $l$ 与 $r$ 相差为 $2$ 的情况，若 $l=x$ 且 $r=x+2$，经过一次循环，$l=x$ 且 $r=x+1$，回归情况①；若 $l=x-1$ 且 $r=x+1$，经过一次循环，$l=x$ 且 $r=x+1$，回归情况①；
+③ $l$ 与 $r$ 相差为 $3$ 的情况，若 $l=x$ 且 $r=x+3$，经过一次循环，$l=x$ 且 $r=x+2$，回归情况②，再经过一次循环，回归情况①；若 $l=x-1$ 且 $r=x+2$，经过一次循环，$l=x$ 且 $r=x+2$，回归情况②，再经过一次循环，回归情况①；若 $l=x-2$ 且 $r=x+1$，经过一次循环，$l=x-1$ 且 $r=x+1$，回归情况②，再经过一次循环，回归情况①；
+④ $l$ 与 $r$ 相差为 $4$ 的情况，若 $l=x$ 且 $r=x+4$，经过一次循环，$l=x$ 且 $r=x+2$，回归情况②，再经过一次循环，回归情况①；若 $l=x-1$ 且 $r=x+3$，经过一次循环，$l=x-1$ 且 $r=x+1$，回归情况②，再经过一次循环，回归情况①；若 $l=x-2$ 且 $r=x+2$，经过一次循环，$l=x$ 且 $r=x+2$，回归情况②，再经过一次循环，回归情况①；若 $l=x-3$ 且 $r=x+1$，经过一次循环，$l=x-1$ 且 $r=x+1$，回归情况②，再经过一次循环，回归情况①；
+...
+由此可以归纳得出，$l$ 与 $r$ 相差为 $N$ 的情况，经过 $\lceil \log_2N \rceil$ 次循环，回归情况①；
+（同理可得初始搜索区间长度为 $n$ ，经过 $\lceil \log_2(n+1) \rceil$ 次循环，二分查找完成）。
+此二分模板得证！
+
+**疑问1：似乎这个证明只是命题的必要性证明，命题的充分性还没有证明，如何严谨的递推到整数集合？**
+**疑问2：实数集合数学证明又应该怎么写？**
+**如能够改进此证明或者解答本人疑问，欢迎同学们留言或者私信，我一定努力优化。**
+
+### 模板溯源
+
+这是 LeetCode 世界服对 **Binary Search** 的介绍，对此，力扣国服也进行了翻译：
+[LeetCode Explore Binary Search](https://leetcode.com/explore/learn/card/binary-search/)
+[LeetBook 二分查找](https://leetcode.cn/leetbook/detail/binary-search/)
+
+总计提供三套通用的二分查找模板，其中第三套模板：
+[Binary Search Template III](https://leetcode.com/explore/learn/card/binary-search/135/template-iii/936/)
+[二分查找模板 III](https://leetcode.cn/leetbook/read/binary-search/xe22ch/)
+
+* []
+
+```C++
+int binarySearch(vector<int>& nums, int target){
+    if (nums.size() == 0)
+        return -1;
+
+    int left = 0, right = nums.size() - 1;
+    while (left + 1 < right){
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+
+    // Post-processing:
+    // End Condition: left + 1 == right
+    if(nums[left] == target) return left;
+    if(nums[right] == target) return right;
+    return -1;
+}
+```
+
+* []
+
+```Java
+int binarySearch(int[] nums, int target) {
+    if (nums == null || nums.length == 0)
+        return -1;
+
+    int left = 0, right = nums.length - 1;
+    while (left + 1 < right){
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+
+    // Post-processing:
+    // End Condition: left + 1 == right
+    if(nums[left] == target) return left;
+    if(nums[right] == target) return right;
+    return -1;
+}
+```
+
+* []
+
+```Python
+def binarySearch(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: int
+    """
+    if len(nums) == 0:
+        return -1
+
+    left, right = 0, len(nums) - 1
+    while left + 1 < right:
+        mid = (left + right) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            left = mid
+        else:
+            right = mid
+
+    # Post-processing:
+    # End Condition: left + 1 == right
+    if nums[left] == target: return left
+    if nums[right] == target: return right
+    return -1
+```
+
+可见，官方也推荐此题用模板III进行解答。
+
+**蓝红二分法在模板III的基础上进行了改进，构造了左右下标边界，将闭区间改造为开区间，完美实现了蓝红二分！**
+
+此外2022年5月热帖 [@yukiyama](/u/yukiyama/) 大佬的[二分查找从入门到入睡](https://leetcode.cn/circle/discuss/ooxfo8/) 对前两个模板进行了深入总结，并且讲述了二分查找的许多奇闻异事，大家也可以学习。
+
+### 后记
+
+对此模板的说明和改进到此基本结束，本人前后修改 $n$ 次，对此模板的使用几乎贯穿了本人近几个月 $1500$ 多题的刷题生涯，几百次套用此模板进行二分查找从无败绩，以后也会继续坚持使用，本文也加入了不少本人自己的理解，真的是想尝试把这个模板说好说透，非常优秀的模板，生动形象且方便记忆，非常值得推广，如果同学们还有什么意见或者建议欢迎在留言区评论。
+此视频已连续3年在B站好评如潮，看来很多同学和我观点一致！
+![Screen Shot 2022-03-20 at 12.02.12 AM.png](https://pic.leetcode-cn.com/1647705872-YpOudF-Screen%20Shot%202022-03-20%20at%2012.02.12%20AM.png)
+这段时间在一些题的题解区开始看到蓝红二分法的身影，我开始感到自己的付出是值得的。
+
+**感谢up主，感谢大家，感谢阅读！**
+
+##### 更于2022-05-20
+

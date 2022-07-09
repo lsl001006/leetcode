@@ -14,6 +14,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1337]矩阵中战斗力最弱的 K 行.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1337]矩阵中战斗力最弱的 K 行.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1337" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1337]矩阵中战斗力最弱的 K 行.py" />
+              <option name="titleSlug" value="the-k-weakest-rows-in-a-matrix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[175]组合两个表.py">
           <value>
             <LeetcodeEditor>

@@ -1,0 +1,50 @@
+# 方法一：二分搜索+最小堆
+
+我们统计采用二分法来统计每行士兵的数量，然后将每行的士兵放到最小堆中，然后从堆中取出K个元素即可。
+**代码如下：**
+
+* 
+
+```
+public static int[] kWeakestRows(int[][] mat, int k) {
+    int row = mat.length;
+    int col = mat[0].length;
+    //最小堆
+    PriorityQueue<int[]> queue = new PriorityQueue<>((x1, x2) -> {
+        if (x1[0] != x2[0]) {
+            return x1[0] - x2[0];
+        } else {
+            return x1[1] - x2[1];
+        }
+    });
+    //统计每行的个数并放入最小堆
+    for (int i = 0; i < row; i++) {
+        int left = 0, right = col - 1;
+        //二分查找最后一个1
+        int pos = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (mat[i][mid] == 1) {
+                pos = mid;
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        if (pos == -1) {
+            pos = 0;
+        } else {
+            pos++;
+        }
+        queue.offer(new int[]{pos, i});
+    }
+    //输出K个最小
+    int[] ans = new int[k];
+    for (int i = 0; i < k; i++) {
+        ans[i] = queue.poll()[1];
+    }
+    return ans;
+}
+```
+
+![image.png](https://pic.leetcode-cn.com/1654088764-iRkdLq-image.png)
