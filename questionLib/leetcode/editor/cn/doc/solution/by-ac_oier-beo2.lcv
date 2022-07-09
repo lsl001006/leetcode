@@ -1,0 +1,52 @@
+## 序列 DP
+
+定义 $f[i][j]$ 为使用 $arr[i]$ 为斐波那契数列的最后一位，使用 $arr[j]$ 为倒数第二位（即 $arr[i]$ 的前一位）时的最长数列长度。
+
+不失一般性考虑 $f[i][j]$ 该如何计算，首先根据斐波那契数列的定义，我们可以直接算得 $arr[j]$ 前一位的值为 $arr[i] - arr[j]$，而快速得知 $arr[i] - arr[j]$ 值的坐标 $t$，可以利用 `arr` 的严格单调递增性质，使用「哈希表」对坐标进行转存，若坐标 $t$ 存在，并且符合 $t < j$，说明此时至少凑成了长度为 $3$ 的斐波那契数列，同时结合状态定义，可以使用 $f[t][j]$ 来更新 $f[i][j]$，即有状态转移方程：
+
+$$
+f[i][j] = \max(3, f[j][t] + 1)
+$$
+
+同时，当我们「从小到大」枚举 $i$，并且「从大到小」枚举 $j$ 时，我们可以进行如下的剪枝操作：
+
+* 可行性剪枝：当出现 $arr[i] - arr[j] >= arr[j]$，说明即使存在值为 $arr[i] - arr[j]$ 的下标 $t$，根据 `arr` 单调递增性质，也不满足 $t < j < i$ 的要求，且继续枚举更小的 $j$，仍然有 $arr[i] - arr[j] >= arr[j]$，仍不合法，直接 `break` 掉当前枚举 $j$ 的搜索分支；
+* 最优性剪枝：假设当前最大长度为 `ans`，只有当 $j + 2 > ans$，我们才有必要往下搜索，$j + 2$ 的含义为以 $arr[j]$ 为斐波那契数列倒数第二个数时的理论最大长度。
+
+代码：
+
+* []
+
+```Java
+class Solution {
+    public int lenLongestFibSubseq(int[] arr) {
+        int n = arr.length, ans = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) map.put(arr[i], i);
+        int[][] f = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = i - 1; j >= 0 && j + 2 > ans; j--) {
+                if (arr[i] - arr[j] >= arr[j]) break;
+                int t = map.getOrDefault(arr[i] - arr[j], -1);
+                if (t == -1) continue;
+                f[i][j] = Math.max(3, f[j][t] + 1);
+                ans = Math.max(ans, f[i][j]);
+            }
+        }
+        return ans;
+    }
+}
+```
+
+* 时间复杂度：存入哈希表复杂度为 $O(n)$；`DP` 过程复杂度为 $O(n^2)$。整体复杂度为 $O(n^2)$
+* 空间复杂度：$O(n^2)$
+
+---
+
+## 最后
+
+**如果有帮助到你，请给题解点个赞和收藏，让更多的人看到 ~ ("▔□▔)/**
+
+也欢迎你 [关注我](https://oscimg.oschina.net/oscnet/up-19688dc1af05cf8bdea43b2a863038ab9e5.png) 和 加入我们的[「组队打卡」](https://leetcode-cn.com/u/ac_oier/)小群 ，提供写「证明」&「思路」的高质量题解。
+
+所有题解已经加入 [刷题指南](https://github.com/SharingSource/LogicStack-LeetCode/wiki)，欢迎 star 哦 ~

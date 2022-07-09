@@ -1,0 +1,109 @@
+### 解题思路
+
+当固定斐波那契数列的两个起始值，或固定两个结束值的时候，整个数列都是唯一确定的(在输入数组中)。
+这里选择从起始开始往后推，我们遍历这两个起点$i, j$，如果他们的和在数列中，记为坐标$k$，即$arr[i] + arr[j] = arr[k]$。
+显然以$j, k$作为起点的序列是和以$i, j$作为起点的序列完全重合的，且长度多了一个数。
+即$dp[j][k] = dp[i][j] + 1$。
+找到最大的两个点即可
+
+P S：
+用数组dp会浪费一半空间，所以这里采用哈希
+
+### 代码
+
+* []
+
+```Python3
+class Solution:
+    def lenLongestFibSubseq(self, arr: List[int]) -> int:
+        n, idx_map, ans = len(arr), {num: i for i, num in enumerate(arr)}, 0
+        dp = defaultdict(lambda: defaultdict(lambda: 2))
+        for i in range(n - 1):
+            for j in range(i + 1, n):
+                if (nxt := arr[i] + arr[j]) in idx_map:
+                    dp[j][idx_map[nxt]] = dp[i][j] + 1
+                    ans = max(ans, dp[j][idx_map[nxt]])
+        return ans
+```
+
+* []
+
+```Java
+class Solution {
+    public int lenLongestFibSubseq(int[] arr) {
+        int n = arr.length, ans = 0;
+        Map<Integer, Integer> idxMap = new HashMap<>(n);
+        for (int i = 0; i < n; i++) {
+            idxMap.put(arr[i], i);
+        }
+        int[][] dp = new int[n][n];
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                dp[i][j] = Math.max(dp[i][j], 2);
+                int nxt = arr[i] + arr[j];
+                if (idxMap.containsKey(nxt)) {
+                    int k = idxMap.get(nxt);
+                    dp[j][k] = dp[i][j] + 1;
+                    ans = Math.max(ans, dp[j][k]);
+                }
+            }
+        }
+        return ans;
+    }
+}
+```
+
+* []
+
+```TypeScript
+function lenLongestFibSubseq(arr: number[]): number {
+    const n = arr.length, idxMap = new Map<number, number>()
+    for (const [i, v] of arr.entries()) {
+        idxMap.set(v, i)
+    }
+    const dp = new Array(n).fill(0).map(() => new Array(n).fill(2))
+    let ans = 0
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = i + 1; j < n; j++) {
+            const nxt = arr[i] + arr[j]
+            if (idxMap.has(nxt)) {
+                const k = idxMap.get(nxt)
+                dp[j][k] = dp[i][j] + 1
+                ans = Math.max(ans, dp[j][k])
+            }
+        }
+    }
+    return ans
+};
+```
+
+* []
+
+```Go
+func lenLongestFibSubseq(arr []int) (ans int) {
+    n, idxMap := len(arr), map[int]int{}
+    dp := make([][]int, n)
+    for i, num := range arr {
+        idxMap[num] = i
+        dp[i] = make([]int, n)
+    }
+    for i := 0; i < n - 1; i++ {
+        for j := i + 1; j < n; j++ {
+            dp[i][j] = max(dp[i][j], 2)
+            if k, ok := idxMap[arr[i] + arr[j]]; ok {
+                dp[j][k] = dp[i][j] + 1
+                ans = max(ans, dp[j][k])
+            }
+        }
+    }
+    return
+}
+
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+```
+

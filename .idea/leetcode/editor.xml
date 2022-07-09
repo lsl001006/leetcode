@@ -146,6 +146,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[873]最长的斐波那契子序列的长度.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[873]最长的斐波那契子序列的长度.md" />
+              <option name="frontendQuestionId" value="leetcode.cn873" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[873]最长的斐波那契子序列的长度.py" />
+              <option name="titleSlug" value="length-of-longest-fibonacci-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[89]格雷编码.py">
           <value>
             <LeetcodeEditor>
