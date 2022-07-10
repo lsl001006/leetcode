@@ -1,0 +1,182 @@
+大家好，我是 [@负雪明烛](https://leetcode-cn.com/u/fuxuemingzhu/)。点击右上方的「**+关注**」**↗**，优质题解不间断！
+
+## 题目大意
+
+今天的题目需要我这个语文课代表进行翻译。
+
+题目中给出的字符串是由小括号`"("`,`")"`构成的。什么是有效的括号字符串呢？
+
+- 空字符串 `""`
+- 左右完全匹配的括号，如 `"()"`，`"(())"`，`"(()())"`。
+
+哪些不是有效的括号字符串呢？
+
+- 左右括号数不等的，如 `"("`，`"(()"`，`"(((()"`
+- 左右顺序错了的，如 `")("`，`"))("`
+
+题目中所谓的「**原语**」就是不能再拆分成两个有效括号字符串 `A + B`的。
+
+- 所有的「原语」，它的**整体**就是一个完整的括号匹配字符串，无法再一刀两断了。
+- 而「非原语」，把它从某个部分**切开**以后，可以变成两个完全匹配的括号字符串。
+
+举个例子：
+
+![1021. 删除最外层的括号.001.png](https://pic.leetcode-cn.com/1653706247-qNpIFN-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.001.png)
+
+题目让我们找出所有的「原语」，然后把每个「原语」的最外边一层 `"("`、`")"`去掉
+
+## 解题方法
+
+### 栈
+
+题目扯了半天，就是让我们实现一个**括号匹配算法**。
+
+谈到括号匹配算法，就会想到「栈」。
+
+本题的做法不难，核心就是：**当栈为空的时候，说明已经形成了『原语』。**
+
+- 从左向右遍历字符串 $s$
+- 当遇到 `"("`时，将其入栈；
+- 当遇到 `")"`时，说明匹配了前面最近一个 `"("`，因此将栈顶弹出；
+
+而结果字符串 `res`，需要根据当前的 `"("` 或者 `")"`是不是「原语」的开头和结束来决定。
+
+- 当`"("`入栈前，栈是空，说明 `"("` 是『原语』的开头，因此不放入 `res`中。
+- 当遇到 `")"` 弹出栈顶以后，栈是空，说明 `")"` 是『原语』的结束，因此不放入 `res`中。
+
+具体过程如下面的动画所示：
+
+<![1021. 删除最外层的括号.001.png](https://pic.leetcode-cn.com/1653705342-wPLJwr-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.001.png),![1021. 删除最外层的括号.002.png](https://pic.leetcode-cn.com/1653705342-SixwQr-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.002.png),![1021. 删除最外层的括号.003.png](https://pic.leetcode-cn.com/1653705342-Zadlyv-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.003.png),![1021. 删除最外层的括号.004.png](https://pic.leetcode-cn.com/1653705342-qkXmxV-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.004.png),![1021. 删除最外层的括号.005.png](https://pic.leetcode-cn.com/1653705342-sYPrvW-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.005.png),![1021. 删除最外层的括号.006.png](https://pic.leetcode-cn.com/1653705342-TGwyjk-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.006.png),![1021. 删除最外层的括号.007.png](https://pic.leetcode-cn.com/1653705342-PNNCRg-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.007.png),![1021. 删除最外层的括号.008.png](https://pic.leetcode-cn.com/1653705342-AVccoh-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.008.png),![1021. 删除最外层的括号.009.png](https://pic.leetcode-cn.com/1653705342-vaHcEX-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.009.png),![1021. 删除最外层的括号.010.png](https://pic.leetcode-cn.com/1653705342-hjEfnc-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.010.png),![1021. 删除最外层的括号.011.png](https://pic.leetcode-cn.com/1653705342-PNtfnF-1021.%20%E5%88%A0%E9%99%A4%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84%E6%8B%AC%E5%8F%B7.011.png)>
+
+#### 代码
+
+判断`"("` 或者 `")"`是不是「原语」的开头和结束，还是挺巧妙的。因此需要注意 $3$ 个 $if$ 的位置。
+
+* cpp
+
+```cpp
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        stack<char> st;
+        string res;
+        for (char c : s) {
+            if (c == ')')
+                st.pop();
+            if (!st.empty())
+                res += c;
+            if (c == '(') {
+                st.push('(');
+            }
+        }
+        return res;
+    }
+};
+```
+
+* []
+
+```Java
+class Solution {
+    public String removeOuterParentheses(String s) {
+        Stack<Character> stack = new Stack<>();
+        String res = "";
+        for (int i = 0; i < s.length(); ++i) {
+            char c = s.charAt(i);
+            if (c == ')') {
+                stack.pop();
+            }
+            if (!stack.empty()) {
+                res += c;
+            }
+            if (c == '(') {
+                stack.add('(');
+            }
+        }
+        return res;
+    }
+}
+```
+
+#### 复杂度
+
+- 时间复杂度：$O(N)$，$N$是字符串长度。
+- 空间复杂度：$O(N)$。
+
+### 记数
+
+我们也发现，题目给出的 `s` 是一个有效括号字符串。
+
+我们可以使用一个变量 $count$ 统计「`"("`比 `")"`多的个数」，当 $count == 0$时，说明左右括号完成了匹配，形成了「原语」。
+
+#### 代码
+
+* cpp
+
+```cpp
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        int count = 0;
+        string res;
+        for (char c : s) {
+            if (c == ')') {
+                count --;
+            }
+            if (count != 0) {
+                res += c;
+            }
+            if (c == '(') {
+                count ++;
+            }
+        }
+        return res;
+    }
+};
+```
+
+* []
+
+```Java
+class Solution {
+    public String removeOuterParentheses(String s) {
+        int count = 0;
+        String res = "";
+        for (int i = 0; i < s.length(); ++i) {
+            char c = s.charAt(i);
+            if (c == ')') {
+                count --;
+            }
+            if (count != 0) {
+                res += c;
+            }
+            if (c == '(') {
+                count ++;
+            }
+        }
+        return res;
+    }
+}
+```
+
+#### 复杂度
+
+- 时间复杂度：$O(N)$，$N$是字符串长度。
+- 空间复杂度：$O(1)$。
+
+## 总结
+
+1. 遇到括号匹配就用栈！
+
+参考资料：[力扣官方题解](https://leetcode.cn/problems/remove-outermost-parentheses/solution/shan-chu-zui-wai-ceng-de-gua-hao-by-leet-sux0/)
+
+---
+
+我是 [@负雪明烛](https://leetcode-cn.com/u/fuxuemingzhu/) ，刷算法题 1000 多道，写了 1000 多篇算法题解，收获阅读量 300 万。
+**关注我**，你将不会错过我的精彩动画题解、面试题分享、组队刷题活动，进入主页 [@负雪明烛](https://leetcode-cn.com/u/fuxuemingzhu/) 右侧有刷题组织，从此刷题不再孤单。
+
+- 在刷题的时候，如果你不知道该怎么刷题，可以看 [LeetCode 应该怎么刷？](https://mp.weixin.qq.com/s/viDYrSlF5INEhVWiJhM2EQ)
+- 如果你觉得题目太多，想在短时间内快速提高，可以看 [LeetCode 最经典的 100 道题](https://mp.weixin.qq.com/s/e51CEkEP6Wz850JYbgz8dw)。
+- 送你一份刷题的代码模板：[【LeetCode】代码模板，刷题必会](https://blog.csdn.net/fuxuemingzhu/article/details/101900729)
+- 我写的 1000 道 LeetCode 题解，[都在这里了，免费拿走](https://fuxuemingzhu.cn/)。
+

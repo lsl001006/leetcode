@@ -1,0 +1,29 @@
+## 方便快速学习算法与理解~
+
+🌇 点赞 👍 收藏 ⭐留言 📝 一键三连 ~关注Jam，从你我做起！
+推荐 python 算法的书籍与系统学习 python 后端开发：
+[leetcode](https://github.com/ls1248659692/leetcode) —— 快速学习各种 python 算法与书籍
+[python_guide](https://github.com/ls1248659692/python_guide) —— python 系统化的后端开发学习
+1.本题就是循环每个字符串，获取出现相同的字母列表
+2.从最短子字符开始
+3.每次获取完后，要修改原始字符减少相同的字母，避免重复字母的问题
+
+![image.png](https://pic.leetcode-cn.com/73ceca1c51662689f4f7cfd525f6e079114f595e4d6f77bc93a17863d21e5647-image.png)
+
+### 代码
+
+* python3
+
+```python3
+class Solution:
+    def commonChars(self, A: List[str]) -> List[str]:
+        res = []
+        min_length_char = min(A, key=len)
+        for char in min_length_char:
+            if all(char in item  for item in A):
+                res.append(char)
+                A = [i.replace(char,'',1)  for i in A]
+
+        return res
+```
+
