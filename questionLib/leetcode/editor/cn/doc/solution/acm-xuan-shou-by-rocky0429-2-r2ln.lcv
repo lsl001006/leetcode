@@ -1,0 +1,295 @@
+大家好呀，我是搜索蛋。
+
+今天解决**二叉搜索树中的搜索**，二叉搜索树查找操作练习题。
+
+这道题本身没什么难度，就是检验大家对二叉搜索树性质的掌握程度。
+
+咱们话不多说，赶紧开始！
+
+![700-0.png](https://pic.leetcode-cn.com/1656983847-TSMwwU-700-0.png)
+
+# LeetCode 700：二叉搜索树中的搜索
+
+## 题意
+
+给定二叉搜索树的根节点 root 和整数值 val。
+
+在二叉搜索树中找到节点值 = val 的节点，返回以该节点为根的子树，如果节点不存在，返回 null。
+
+## 示例
+
+输入：root = [4,2,7,1,3]，val = 2
+输出：[2,1,3]
+
+![700-1.png](https://pic.leetcode-cn.com/1656983857-onSusJ-700-1.png)
+
+## 提示
+
+- 树中节点数在 [1,5000] 范围内。
+- 1 <= Node.val <= 10^7
+- root 是二叉搜索树
+- 1 <= val <= 10^7
+
+# 题目解析
+
+这道题其实就是用了二叉搜索树的性质，难度简单。
+
+如果你不熟悉二叉搜索树，可以看我下面这篇文章：
+
+**[ACM 选手带你玩转二叉搜索树！](https://mp.weixin.qq.com/s/DsWb4oXeOWsCRiuPRwJysg)**
+
+二叉搜索树的的性质如下：
+
+- 若左子树不空，那左子树所有节点的值均 < 根节点的值。
+- 若右子树不空，那右子树所有节点的值均 > 根节点的值。
+- 左右子树也均为二叉搜索树。
+
+![700-5.png](https://pic.leetcode-cn.com/1656983866-jlxHfF-700-5.png)
+
+这道题为二叉搜索树的【搜索】，其实也就是二叉搜索树的【查找】操作。
+
+根据二叉搜索树的性质，在**二叉搜索树中查找一个节点**，其实就 3 步：
+
+- 将查找的节点根节点比较，如果相等，则直接返回。
+- 如果查找的节点 < 根节点，则在左子树中递归查找。
+- 如果查找的节点 > 根节点，则在右子树中递归查找。
+
+# 递归法
+
+递归法就是老套路，根据【[**递归算法**](https://mp.weixin.qq.com/s/0MS7iz1qSQOZBmKY5vVxSw)】文章中讲的，实现递归，需要两步：
+
+- 找出重复的子问题（递推公式）。
+- 终止条件。
+
+**(1) 找出重复的子问题。**
+
+这个其实在上面二叉搜索树的查找步骤中可以看出。
+
+- 如果查找的节点 < 根节点，则在左子树中递归查找。
+- 如果查找的节点 > 根节点，则在右子树中递归查找。
+
+对于各个子树也都是同样的操作。
+
+* Python
+
+```Python
+if root.val > val:
+    return self.searchBST(root.left, val)
+if root.val < val:
+    return self.searchBST(root.right, val)
+```
+
+**(2) 确定终止条件。**
+
+对于中止条件的话，在题中就是：
+
+- 如果找到，直接返回；
+- 如果 root 为空，那就没啥好找的了，直接返回 None。
+
+* Python
+
+```Python
+if root == None:
+    return None
+if root.val == val:
+    return root
+```
+
+## Python 代码实现
+
+* Python
+
+```Python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def searchBST(self, root: TreeNode, val: int) -> TreeNode:
+        if root == None:
+            return None
+        if root.val == val:
+            return root
+
+        if root.val > val:
+            return self.searchBST(root.left, val)
+
+        if root.val < val:
+            return self.searchBST(root.right, val)
+```
+
+## Java 代码实现
+
+* Java
+
+```Java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode searchBST(TreeNode root, int val) {
+        if(root == null){
+            return null;
+        }
+        if(root.val == val){
+            return root;
+        }
+        if(root.val > val){
+            return searchBST(root.left, val);
+        }
+        else{
+            return searchBST(root.right, val);
+        }
+    }
+}
+```
+
+本题解，最坏情况下二叉搜索树是一条链，在递归过程中每个节点都被遍历到，**时间复杂度为 O(n)**。
+
+此外在递归过程中调用了额外的栈空间，栈的大小取决于二叉树的高度，二叉树最坏情况下的高度为 n，所以**空间复杂度为 O(n)**。
+
+# 非递归法（迭代）
+
+非递归法同样也是借助二叉搜索树的性质，其实也是 3 步：
+
+- 当 val == root.val，直接返回 root；
+- 当 val < root.val，root 就走到 root.left，继续找；
+- 当 val > root.val，root 就走到 root.right，继续找。
+
+我们以下图为例：
+
+![700-2.png](https://pic.leetcode-cn.com/1656983881-hYiwrJ-700-2.png)
+
+第 1 步：root.val = 4，val = 2，此时 root.val > val，根据二叉树的性质，val 在左子树中寻找，此时 root = root.left。
+
+![700-3.png](https://pic.leetcode-cn.com/1656983886-ypmbac-700-3.png)
+
+* Python
+
+```Python
+elif root.val > val:
+    root = root.left
+```
+
+第 2 步，此时 root.val = 2，val = 2，root.val == val，即此节点就是我们要寻找的节点，直接返回。
+
+![700-4.png](https://pic.leetcode-cn.com/1656983894-PUZtvN-700-4.png)
+
+* Python
+
+```Python
+if root.val == val:
+    return root
+```
+
+## Python 代码实现
+
+* Python
+
+```Python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def searchBST(self, root: TreeNode, val: int) -> TreeNode:
+        if root == None:
+            return None
+
+        while root:
+            if root.val == val:
+                return root
+            elif root.val > val:
+                root = root.left
+            else:
+                root = root.right
+```
+
+## Java 代码实现
+
+* Java
+
+```Java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode searchBST(TreeNode root, int val) {
+        while(root != null){
+            if(root.val == val){
+                return root;
+            }
+            else if(root.val > val){
+                root = root.left;
+            }
+            else{
+                root = root.right;
+            }
+        }
+        return null;
+    }
+}
+
+```
+
+本题解，最坏情况下二叉搜索树是一条链，在递归过程中每个节点都被遍历到，**时间复杂度为 O(n)**。
+
+非递归法没有使用额外的空间，所以**空间复杂度为 O(1)**。
+
+---
+
+**图解二叉搜索树中的搜索**到这就结束辣，是不是很简单呢？其实到了现在这个地步，做题只会越来越顺。
+
+当然辣，这只是二叉搜索树中的第一道题，还是要做好总结。
+
+## 写在最后
+
+**如果你觉得有帮助到你，请给题解点个赞和收藏，让更多的人看到呀**
+
+也欢迎你点击[**关注我**](https://cdn.codegoudan.com/img/gzgzhbcwqlgd0-1.png)，解锁更多图解 LeetCode，一起玩转数据结构与算法！
+
+我是帅蛋，我们下次见！
+
+<br />
+
+[**推荐阅读** 👍：ACM 选手带你玩转二叉树](https://mp.weixin.qq.com/s/l8jwYfaUuV5ZjFH8CMNw9A)
+
+[**推荐阅读** 👍：ACM选手带你玩转二叉搜索树](https://mp.weixin.qq.com/s/DsWb4oXeOWsCRiuPRwJysg)
+
+[**推荐阅读** 👍：ACM 选手带你玩转二叉树层次遍历](https://mp.weixin.qq.com/s/3MMgFtLW9BHpguUkHICLkQ)
+
+[**推荐阅读** 👍：ACM 选手图解 LeetCode 二叉树的最近公共祖先](https://mp.weixin.qq.com/s/MmlenpO4wUrgH7FcDgptiA)
+
+[**推荐阅读** 👍：ACM 选手图解 LeetCode 合并二叉树](https://mp.weixin.qq.com/s/766933ZUvJG_AseyirACpg)
+
+[**推荐阅读** 👍：ACM选手图解 LeetCode 最大二叉树](https://mp.weixin.qq.com/s/BzHN5s5YGqkN2eBx_3vP0w)
+
+[**推荐阅读** 👍：ACM 选手带你玩转时间复杂度和空间复杂度](https://mp.weixin.qq.com/s/Q3LUNACtC8G-x4EMtPGRHA)
