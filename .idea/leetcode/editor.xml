@@ -223,6 +223,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[700]二叉搜索树中的搜索.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[700]二叉搜索树中的搜索.md" />
+              <option name="frontendQuestionId" value="leetcode.cn700" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[700]二叉搜索树中的搜索.py" />
+              <option name="titleSlug" value="search-in-a-binary-search-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[744]寻找比目标字母大的最小字母.py">
           <value>
             <LeetcodeEditor>
