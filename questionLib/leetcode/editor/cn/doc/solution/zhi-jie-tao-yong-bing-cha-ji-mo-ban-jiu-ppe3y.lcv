@@ -1,0 +1,54 @@
+* java
+
+```java
+/*
+ * Copyright (c) 2021
+ * Author: xiaoweixiang
+ */
+class Solution {
+    public boolean validPath(int n, int[][] edges, int start, int end) {
+        AndCheck edge = new AndCheck(n);
+        for (int i = 0; i < edges.length; i++) {
+                edge.merge(edges[i][0], edges[i][1]);
+            
+        }
+        return edge.isConnected(start,end);
+
+    }
+
+     class AndCheck {
+        int[] parent;
+        int size;
+        public AndCheck(int size) {
+            this.size = size;
+            parent = new int[size];
+            for (int i = 0; i < parent.length; i++) {
+                parent[i] = i;
+            }
+        }
+
+        /**
+         * 1,find
+         * 2,isConnected
+         * 3,merge
+         */
+        public int find(int a) {
+            int b = parent[a];
+            if (b != a) return find(b);
+            return b;
+        }
+
+        public boolean isConnected(int a, int b) {
+            return find(a) == find(b);
+        }
+
+        public void merge(int a, int b) {
+            int c = find(a);
+            int d = find(b);
+            if (c == d) return;
+            parent[c] = d;
+        }
+    }
+}
+```
+

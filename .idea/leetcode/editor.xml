@@ -80,6 +80,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1971]寻找图中是否存在路径.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1971]寻找图中是否存在路径.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1971" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1971]寻找图中是否存在路径.py" />
+              <option name="titleSlug" value="find-if-path-exists-in-graph" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1]两数之和.py">
           <value>
             <LeetcodeEditor>
