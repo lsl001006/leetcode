@@ -256,6 +256,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[783]二叉搜索树节点最小距离.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[783]二叉搜索树节点最小距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn783" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[783]二叉搜索树节点最小距离.py" />
+              <option name="titleSlug" value="minimum-distance-between-bst-nodes" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[873]最长的斐波那契子序列的长度.py">
           <value>
             <LeetcodeEditor>
@@ -267,6 +278,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[897]递增顺序搜索树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[897]递增顺序搜索树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn897" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[897]递增顺序搜索树.py" />
+              <option name="titleSlug" value="increasing-order-search-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[89]格雷编码.py">
           <value>
             <LeetcodeEditor>
@@ -275,6 +297,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[89]格雷编码.py" />
               <option name="titleSlug" value="gray-code" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[938]二叉搜索树的范围和.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[938]二叉搜索树的范围和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn938" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[938]二叉搜索树的范围和.py" />
+              <option name="titleSlug" value="range-sum-of-bst" />
             </LeetcodeEditor>
           </value>
         </entry>
