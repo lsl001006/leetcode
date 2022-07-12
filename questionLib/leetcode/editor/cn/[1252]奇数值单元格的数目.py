@@ -54,13 +54,23 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
-import numpy as np
+
 class Solution:
     def oddCells(self, m: int, n: int, indices: List[List[int]]) -> int:
-        mat = np.zeros((m,n))
-        for each in indices:
-            r, c = each
-            mat[r,:] += 1
-            mat[:, c] += 1
-        return int(sum(sum(mat%2)))
+        # ----------sol1----------
+        # import numpy as np
+        #         mat = np.zeros((m,n))
+        #         for each in indices:
+        #             r, c = each
+        #             mat[r,:] += 1
+        #             mat[:, c] += 1
+        #         return int(sum(sum(mat%2)))
+        #-----------sol2-----------
+        rows = [0] * m
+        cols = [0] * n
+        for x, y in indices:
+            rows[x] += 1
+            cols[y] += 1
+        return sum((row + col) % 2 for row in rows for col in cols)
+        
 # leetcode submit region end(Prohibit modification and deletion)
