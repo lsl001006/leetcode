@@ -212,6 +212,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[543]二叉树的直径.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[543]二叉树的直径.md" />
+              <option name="frontendQuestionId" value="leetcode.cn543" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[543]二叉树的直径.py" />
+              <option name="titleSlug" value="diameter-of-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[596]超过5名学生的课.py">
           <value>
             <LeetcodeEditor>
@@ -330,6 +341,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[944]删列造序.py" />
               <option name="titleSlug" value="delete-columns-to-make-sorted" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[96]不同的二叉搜索树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[96]不同的二叉搜索树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn96" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[96]不同的二叉搜索树.py" />
+              <option name="titleSlug" value="unique-binary-search-trees" />
             </LeetcodeEditor>
           </value>
         </entry>
