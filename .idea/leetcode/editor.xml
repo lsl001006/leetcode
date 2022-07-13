@@ -234,6 +234,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[563]二叉树的坡度.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[563]二叉树的坡度.md" />
+              <option name="frontendQuestionId" value="leetcode.cn563" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[563]二叉树的坡度.py" />
+              <option name="titleSlug" value="binary-tree-tilt" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[596]超过5名学生的课.py">
           <value>
             <LeetcodeEditor>
