@@ -46,17 +46,14 @@
 class Solution:
     def __init__(self):
         self.targets = {}
-        self.ans = False
 
     def findTarget(self, root: TreeNode, k: int) -> bool:
         if not root:
-            return None
-        self.findTarget(root.left, k)
+            return False
         if root.val in self.targets:
-            self.ans = True
+            return True
         else:
             self.targets[k - root.val] = root.val
-        self.findTarget(root.right, k)
-        return self.ans
+        return self.findTarget(root.left, k) or self.findTarget(root.right, k)
 
 # leetcode submit region end(Prohibit modification and deletion)
