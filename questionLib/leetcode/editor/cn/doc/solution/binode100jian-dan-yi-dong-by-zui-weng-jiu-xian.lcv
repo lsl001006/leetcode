@@ -1,0 +1,58 @@
+### 解题思路
+
+1. 要求是原址修改，即**要直接利用这些已经存在的节点空间**，**修改**这些节点的**指向**来得到单向链表。
+
+2. 要求单向链表依然符合二叉搜索树的性质，说是单向链表，其实还是一棵特殊的二叉搜索树。
+
+3. 众所周知，对二叉搜索树采用**中序遍历**就能得到一个升序序列。 那么如果我们在遍历过程中，**修改每一个根节点的左右指向**，不就实现了原址修改了吗。
+
+![image.png](https://pic.leetcode-cn.com/1599564544-pwwpAe-image.png)
+
+### 代码
+
+* java
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    TreeNode head = new TreeNode(-1);   // 为了返回单向链表的头节点而多设的一个节点
+    TreeNode perv = null;               // 指向当前节点的前一个节点
+    public TreeNode convertBiNode(TreeNode root) {
+        helper(root);
+        return head.right;
+    }
+
+    public void helper(TreeNode root) {
+        if (root == null) { return;}
+        helper(root.left);
+        if (perv == null) {     // 第一个节点
+            perv = root;        // 记录第一个节点
+            head.right = root;  // 记录它，它将作为单链表的表头
+        } else {                // 第一个节点之后的节点
+            perv.right = root;  // 前一个节点的右指针指向当前节点
+            perv = root;        // 更新perv指向
+        }
+        root.left = null;       // 当前节点的左指针设为null
+        helper(root.right);
+    }
+}
+```
+
+### 算法分析
+
+设$n$为二叉搜索树中节点的个数。
+
+1. 中序遍历所有节点仅访问一次，所以时间复杂度为$O(n)$.
+
+2. 递归使用辅助栈空间$O(n)$，几个临时变量$O(1)$，因此总的空间复杂度为$O(n)$.
+
+### 如果本文对你有帮助，可以给一个大拇指呀！
+
