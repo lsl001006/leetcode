@@ -267,6 +267,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[617]合并二叉树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[617]合并二叉树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn617" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[617]合并二叉树.py" />
+              <option name="titleSlug" value="merge-two-binary-trees" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[653]两数之和 IV - 输入 BST.py">
           <value>
             <LeetcodeEditor>
