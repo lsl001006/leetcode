@@ -245,6 +245,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[572]另一棵树的子树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[572]另一棵树的子树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn572" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[572]另一棵树的子树.py" />
+              <option name="titleSlug" value="subtree-of-another-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[596]超过5名学生的课.py">
           <value>
             <LeetcodeEditor>
