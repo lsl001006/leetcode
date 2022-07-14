@@ -355,6 +355,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[745]前缀和后缀搜索.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[745]前缀和后缀搜索.md" />
+              <option name="frontendQuestionId" value="leetcode.cn745" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[745]前缀和后缀搜索.py" />
+              <option name="titleSlug" value="prefix-and-suffix-search" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[783]二叉搜索树节点最小距离.py">
           <value>
             <LeetcodeEditor>
