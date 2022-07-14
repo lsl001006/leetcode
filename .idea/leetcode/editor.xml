@@ -300,6 +300,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[671]二叉树中第二小的节点.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[671]二叉树中第二小的节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn671" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[671]二叉树中第二小的节点.py" />
+              <option name="titleSlug" value="second-minimum-node-in-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[700]二叉搜索树中的搜索.py">
           <value>
             <LeetcodeEditor>
