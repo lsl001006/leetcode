@@ -256,6 +256,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[558]四叉树交集.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[558]四叉树交集.md" />
+              <option name="frontendQuestionId" value="leetcode.cn558" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[558]四叉树交集.py" />
+              <option name="titleSlug" value="logical-or-of-two-binary-grids-represented-as-quad-trees" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[559]N 叉树的最大深度.py">
           <value>
             <LeetcodeEditor>
