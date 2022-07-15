@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1022]从根到叶的二进制数之和.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1022]从根到叶的二进制数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1022" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1022]从根到叶的二进制数之和.py" />
+              <option name="titleSlug" value="sum-of-root-to-leaf-binary-numbers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1047]删除字符串中的所有相邻重复项.py">
           <value>
             <LeetcodeEditor>
