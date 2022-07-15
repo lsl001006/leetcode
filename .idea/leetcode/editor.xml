@@ -586,6 +586,39 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 55 - II]平衡二叉树.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 55 - II]平衡二叉树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 55 - II" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 55 - II]平衡二叉树.py" />
+              <option name="titleSlug" value="ping-heng-er-cha-shu-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 55 - I]二叉树的深度.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 55 - I]二叉树的深度.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 55 - I" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 55 - I]二叉树的深度.py" />
+              <option name="titleSlug" value="er-cha-shu-de-shen-du-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 68 - II]二叉树的最近公共祖先.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 68 - II]二叉树的最近公共祖先.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 68 - II" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 68 - II]二叉树的最近公共祖先.py" />
+              <option name="titleSlug" value="er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 68 - I]二叉搜索树的最近公共祖先.py">
           <value>
             <LeetcodeEditor>
