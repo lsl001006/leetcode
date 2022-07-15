@@ -476,6 +476,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[993]二叉树的堂兄弟节点.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[993]二叉树的堂兄弟节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn993" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[993]二叉树的堂兄弟节点.py" />
+              <option name="titleSlug" value="cousins-in-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 54]二叉搜索树的第k大节点.py">
           <value>
             <LeetcodeEditor>
