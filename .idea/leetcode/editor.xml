@@ -531,6 +531,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 27]二叉树的镜像.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 27]二叉树的镜像.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 27" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 27]二叉树的镜像.py" />
+              <option name="titleSlug" value="er-cha-shu-de-jing-xiang-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 54]二叉搜索树的第k大节点.py">
           <value>
             <LeetcodeEditor>
