@@ -850,6 +850,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.07]链表相交.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[面试题 02.07]链表相交.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 02.07" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.07]链表相交.py" />
+              <option name="titleSlug" value="intersection-of-two-linked-lists-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.02]最小高度树.py">
           <value>
             <LeetcodeEditor>
