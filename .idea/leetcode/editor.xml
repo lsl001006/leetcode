@@ -817,6 +817,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.02]返回倒数第 k 个节点.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[面试题 02.02]返回倒数第 k 个节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 02.02" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.02]返回倒数第 k 个节点.py" />
+              <option name="titleSlug" value="kth-node-from-end-of-list-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.03]删除中间节点.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[面试题 02.03]删除中间节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 02.03" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.03]删除中间节点.py" />
+              <option name="titleSlug" value="delete-middle-node-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.02]最小高度树.py">
           <value>
             <LeetcodeEditor>
