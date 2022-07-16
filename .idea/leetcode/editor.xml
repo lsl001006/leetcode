@@ -377,6 +377,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[705]设计哈希集合.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[705]设计哈希集合.md" />
+              <option name="frontendQuestionId" value="leetcode.cn705" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[705]设计哈希集合.py" />
+              <option name="titleSlug" value="design-hashset" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[735]行星碰撞.py">
           <value>
             <LeetcodeEditor>
@@ -682,6 +693,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.02]最小高度树.py" />
               <option name="titleSlug" value="minimum-height-tree-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.04]检查平衡性.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[面试题 04.04]检查平衡性.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 04.04" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.04]检查平衡性.py" />
+              <option name="titleSlug" value="check-balance-lcci" />
             </LeetcodeEditor>
           </value>
         </entry>
