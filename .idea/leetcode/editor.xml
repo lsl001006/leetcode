@@ -839,6 +839,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.06]回文链表.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[面试题 02.06]回文链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn面试题 02.06" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.06]回文链表.py" />
+              <option name="titleSlug" value="palindrome-linked-list-lcci" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 04.02]最小高度树.py">
           <value>
             <LeetcodeEditor>
