@@ -652,6 +652,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 52]两个链表的第一个公共节点.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 52]两个链表的第一个公共节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 52" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 52]两个链表的第一个公共节点.py" />
+              <option name="titleSlug" value="liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 54]二叉搜索树的第k大节点.py">
           <value>
             <LeetcodeEditor>
@@ -715,6 +726,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 001]整数除法.py" />
               <option name="titleSlug" value="xoh6Oh" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 041]滑动窗口的平均值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer II 041]滑动窗口的平均值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer II 041" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 041]滑动窗口的平均值.py" />
+              <option name="titleSlug" value="qIsx9U" />
             </LeetcodeEditor>
           </value>
         </entry>
