@@ -322,6 +322,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[594]最长和谐子序列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[594]最长和谐子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn594" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[594]最长和谐子序列.py" />
+              <option name="titleSlug" value="longest-harmonious-subsequence" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[596]超过5名学生的课.py">
           <value>
             <LeetcodeEditor>
@@ -355,6 +366,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[645]错误的集合.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[645]错误的集合.md" />
+              <option name="frontendQuestionId" value="leetcode.cn645" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[645]错误的集合.py" />
+              <option name="titleSlug" value="set-mismatch" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[653]两数之和 IV - 输入 BST.py">
           <value>
             <LeetcodeEditor>
@@ -374,6 +396,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[671]二叉树中第二小的节点.py" />
               <option name="titleSlug" value="second-minimum-node-in-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[697]数组的度.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[697]数组的度.md" />
+              <option name="frontendQuestionId" value="leetcode.cn697" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[697]数组的度.py" />
+              <option name="titleSlug" value="degree-of-an-array" />
             </LeetcodeEditor>
           </value>
         </entry>
