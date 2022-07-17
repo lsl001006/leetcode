@@ -56,7 +56,6 @@ class Solution:
 
     def findShortestSubArray(self, nums: List[int]) -> int:
         cnt = Counter(nums)
-        d = {}
         sortedKeys = sorted(cnt.keys(), key=lambda x: cnt[x], reverse=True)
         maxd = cnt[sortedKeys[0]]
         mind = 50001
