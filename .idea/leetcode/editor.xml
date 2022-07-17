@@ -520,6 +520,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[888]公平的糖果交换.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[888]公平的糖果交换.md" />
+              <option name="frontendQuestionId" value="leetcode.cn888" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[888]公平的糖果交换.py" />
+              <option name="titleSlug" value="fair-candy-swap" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[897]递增顺序搜索树.py">
           <value>
             <LeetcodeEditor>
@@ -539,6 +550,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[89]格雷编码.py" />
               <option name="titleSlug" value="gray-code" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[914]卡牌分组.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[914]卡牌分组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn914" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[914]卡牌分组.py" />
+              <option name="titleSlug" value="x-of-a-kind-in-a-deck-of-cards" />
             </LeetcodeEditor>
           </value>
         </entry>
