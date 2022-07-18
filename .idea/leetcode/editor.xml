@@ -80,6 +80,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1160]拼写单词.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1160]拼写单词.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1160" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1160]拼写单词.py" />
+              <option name="titleSlug" value="find-words-that-can-be-formed-by-characters" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1175]质数排列.py">
           <value>
             <LeetcodeEditor>
@@ -88,6 +99,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1175]质数排列.py" />
               <option name="titleSlug" value="prime-arrangements" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1189]“气球” 的最大数量.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1189]“气球” 的最大数量.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1189" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1189]“气球” 的最大数量.py" />
+              <option name="titleSlug" value="maximum-number-of-balloons" />
             </LeetcodeEditor>
           </value>
         </entry>
