@@ -1,0 +1,76 @@
+**解题思路：**
+
+1. 照着题意模拟即可，因为`A`先手，所以所有的判断条件肯定是`A`先赢，即先判断`'X'`的情况
+2. 看代码，简单易懂
+3. 类型题，[面试题 16.04. 井字游戏](/problems/tic-tac-toe-lcci/)，[794. 有效的井字游戏](/problems/valid-tic-tac-toe-state/)
+
+**代码如下：**
+
+* java
+
+```java
+class Solution {
+    public String tictactoe(int[][] moves) {
+        int n = moves.length;
+        char[][] temp = new char[3][3];
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                temp[moves[i][0]][moves[i][1]] = 'X';
+            } else {
+                temp[moves[i][0]][moves[i][1]] = 'O';
+            }
+        }
+
+        //相同的行
+        for (int i = 0; i < 3; i++) {
+            if (temp[i][0] == temp[i][1] && temp[i][1] == temp[i][2]) {
+                if (temp[i][0] == 'X') {
+                    return "A";
+                } else if (temp[i][0] == 'O') {
+                    return "B";
+                }
+            }
+        }
+
+        //相同的列
+        for (int i = 0; i < 3; i++) {
+            if (temp[0][i] == temp[1][i] && temp[1][i] == temp[2][i]) {
+                if (temp[0][i] == 'X') {
+                    return "A";
+                } else if (temp[0][i] == 'O') {
+                    return "B";
+                }
+            }
+        }
+
+
+        //135度对角线
+        if (temp[0][0] == temp[1][1] && temp[1][1] == temp[2][2]) {
+            if (temp[0][0] == 'X') {
+                return "A";
+            } else if (temp[0][0] == 'O') {
+                return "B";
+            }
+        }
+
+
+        //45度对角线
+        if (temp[2][0] == temp[1][1] && temp[1][1] == temp[0][2]) {
+            if (temp[2][0] == 'X') {
+                return "A";
+            } else if (temp[2][0] == 'O') {
+                return "B";
+            }
+        }
+
+        //没有人获胜且没办法行动
+        if (n == 9) {
+            return "Draw";
+        }
+        
+        //游戏还没有结束
+        return "Pending";
+    }
+}
+```
+

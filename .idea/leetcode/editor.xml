@@ -113,6 +113,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1207]独一无二的出现次数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1207]独一无二的出现次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1207" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1207]独一无二的出现次数.py" />
+              <option name="titleSlug" value="unique-number-of-occurrences" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1252]奇数值单元格的数目.py">
           <value>
             <LeetcodeEditor>
@@ -121,6 +132,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1252]奇数值单元格的数目.py" />
               <option name="titleSlug" value="cells-with-odd-values-in-a-matrix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1275]找出井字棋的获胜者.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1275]找出井字棋的获胜者.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1275" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1275]找出井字棋的获胜者.py" />
+              <option name="titleSlug" value="find-winner-on-a-tic-tac-toe-game" />
             </LeetcodeEditor>
           </value>
         </entry>
