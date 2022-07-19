@@ -68,31 +68,19 @@ class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         if not head:
             return None
-        # 遍历链表
-        links = []
-        mp = {}
-        while head:
-            v = head.val
-            ids, idr = id(head), None
-            if head.random:
-                idr = id(head.random)
-            links.append([Node(v), ids])
-            mp[ids] = idr
-            head = head.next
-        for i in range(n := len(links)):
-            nodei, idsi = links[i]
-            idr = mp[idsi]
-            if not idr:
-                nodei.random = None
-            # 寻找random
-            for j in range(len(links)):
-                nodej, idsj = links[j]
-                if idr == idsj:
-                    nodei.random = nodej
-                    break
-            # 接上next
-            if i < n - 1:
-                nodei.next = links[i + 1][0]
-        return links[0][0]
+        dic = {}
+        # 3. 复制各节点，并建立 “原节点 -> 新节点” 的 Map 映射
+        cur = head
+        while cur:
+            dic[cur] = Node(cur.val)
+            cur = cur.next
+        cur = head
+        # 4. 构建新节点的 next 和 random 指向
+        while cur:
+            dic[cur].next = dic.get(cur.next)
+            dic[cur].random = dic.get(cur.random)
+            cur = cur.next
+        # 5. 返回新链表的头节点
+        return dic[head]
 
 # leetcode submit region end(Prohibit modification and deletion)

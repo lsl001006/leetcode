@@ -1,0 +1,1 @@
+`class Solution:copyRandomList=lambda self,head:copy.deepcopy(head)`
