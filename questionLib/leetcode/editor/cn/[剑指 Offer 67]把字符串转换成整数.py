@@ -68,7 +68,7 @@ class Solution:
         if not str:
             return 0
         res, i, sign = 0, 1, 1
-        int_max, int_min, bdry = 2 ** 31 - 1, - 2 ** 31, (2 ** 31 - 1) // 10
+        int_max, int_min, bdry = (2 << 30) - 1, - (2 << 30), ((2 << 30) - 1) // 10
         if str[0] == '-':
             sign = -1
         elif str[0] != '+':
