@@ -938,6 +938,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - I]滑动窗口的最大值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 59 - I]滑动窗口的最大值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 59 - I" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - I]滑动窗口的最大值.py" />
+              <option name="titleSlug" value="hua-dong-chuang-kou-de-zui-da-zhi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 68 - II]二叉树的最近公共祖先.py">
           <value>
             <LeetcodeEditor>
