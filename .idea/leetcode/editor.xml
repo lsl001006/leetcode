@@ -938,6 +938,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - II]队列的最大值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 59 - II]队列的最大值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 59 - II" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - II]队列的最大值.py" />
+              <option name="titleSlug" value="dui-lie-de-zui-da-zhi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - I]滑动窗口的最大值.py">
           <value>
             <LeetcodeEditor>
@@ -946,6 +957,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 59 - I]滑动窗口的最大值.py" />
               <option name="titleSlug" value="hua-dong-chuang-kou-de-zui-da-zhi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 67]把字符串转换成整数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 67]把字符串转换成整数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 67" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 67]把字符串转换成整数.py" />
+              <option name="titleSlug" value="ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof" />
             </LeetcodeEditor>
           </value>
         </entry>
