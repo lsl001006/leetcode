@@ -762,6 +762,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 20]表示数值的字符串.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 20]表示数值的字符串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 20" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 20]表示数值的字符串.py" />
+              <option name="titleSlug" value="biao-shi-shu-zhi-de-zi-fu-chuan-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 22]链表中倒数第k个节点.py">
           <value>
             <LeetcodeEditor>
