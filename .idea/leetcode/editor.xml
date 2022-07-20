@@ -245,6 +245,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2341]数组能形成多少数对.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[2341]数组能形成多少数对.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2341" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2341]数组能形成多少数对.py" />
+              <option name="titleSlug" value="maximum-number-of-pairs-in-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[23]合并K个升序链表.py">
           <value>
             <LeetcodeEditor>
