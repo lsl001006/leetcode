@@ -1,0 +1,104 @@
+#### 1，回溯算法求解
+
+回溯算法实际上一个类似枚举的搜索尝试过程，也就是一个个去试，我们解这道题也是通过一个个去试，下面就用示例1来画个图看一下
+![image.png](https://pic.leetcode-cn.com/b13c34a26060e7eea8ba5001928bcf6972abc65df05eca3b5a29e5fc483b9a94-image.png)
+我们看到他是从矩形中的一个点开始往他的上下左右四个方向查找，这个点可以是矩形中的任何一个点，所以代码的大致轮廓我们应该能写出来，就是遍历矩形所有的点，然后从这个点开始往他的4个方向走，因为是二维数组，所以有两个for循环，代码如下
+
+* 
+
+```
+public boolean exist(char[][] board, String word) {
+    char[] words = word.toCharArray();
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board[0].length; j++) {
+            //从[i,j]这个坐标开始查找
+            if (dfs(board, words, i, j, 0))
+                return true;
+        }
+    }
+    return false;
+}
+```
+
+这里关键代码是dfs这个函数，因为每一个点我们都可以往他的4个方向查找，所以我们可以把它想象为一棵4叉树，就是每个节点有4个子节点，而树的遍历我们最容易想到的就是递归，我们来大概看一下
+
+* 
+
+```
+boolean dfs(char[][] board, char[] word, int i, int j, int index) {
+    if (边界条件的判断) {
+        return;
+    }
+
+    一些逻辑处理
+
+    boolean res;
+    //往右
+    res = dfs(board, word, i + 1, j, index + 1)
+    //往左
+    res |= dfs(board, word, i - 1, j, index + 1)
+    //往下
+    res |= dfs(board, word, i, j + 1, index + 1)
+    //往上
+    res |= dfs(board, word, i, j - 1, index + 1)
+    //上面4个方向，只要有一个能查找到，就返回true；
+    return res;
+}
+```
+
+最终的完整代码如下
+
+* 
+
+```
+public boolean exist(char[][] board, String word) {
+    char[] words = word.toCharArray();
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board[0].length; j++) {
+            //从[i,j]这个坐标开始查找
+            if (dfs(board, words, i, j, 0))
+                return true;
+        }
+    }
+    return false;
+}
+
+boolean dfs(char[][] board, char[] word, int i, int j, int index) {
+    //边界的判断，如果越界直接返回false。index表示的是查找到字符串word的第几个字符，
+    //如果这个字符不等于board[i][j]，说明验证这个坐标路径是走不通的，直接返回false
+    if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != word[index])
+        return false;
+    //如果word的每个字符都查找完了，直接返回true
+    if (index == word.length - 1)
+        return true;
+    //把当前坐标的值保存下来，为了在最后复原
+    char tmp = board[i][j];
+    //然后修改当前坐标的值
+    board[i][j] = '.';
+    //走递归，沿着当前坐标的上下左右4个方向查找
+    boolean res = dfs(board, word, i + 1, j, index + 1) || dfs(board, word, i - 1, j, index + 1) ||
+            dfs(board, word, i, j + 1, index + 1) || dfs(board, word, i, j - 1, index + 1);
+    //递归之后再把当前的坐标复原
+    board[i][j] = tmp;
+    return res;
+}
+```
+
+看一下运行结果
+![image.png](https://pic.leetcode-cn.com/1599955050-twRRSW-image.png)
+
+关于回溯算法也可以看下
+[39. 组合总和](https://leetcode-cn.com/problems/combination-sum/)
+[40. 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)
+[216. 组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)
+[46. 全排列](https://leetcode-cn.com/problems/permutations/)
+[47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
+[52. N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)
+[77. 组合](https://leetcode-cn.com/problems/combinations/)
+[78. 子集](https://leetcode-cn.com/problems/subsets/)
+[1219. 黄金矿工](https://leetcode-cn.com/problems/path-with-maximum-gold/)
+
+<br> </br>
+
+#### 如果觉得有用就给个赞吧，还可以关注我的[LeetCode主页](https://leetcode-cn.com/u/sdwwld/)查看更多的详细题解
+
