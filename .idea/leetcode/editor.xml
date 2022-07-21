@@ -179,6 +179,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1346]检查整数及其两倍数是否存在.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1346]检查整数及其两倍数是否存在.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1346" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1346]检查整数及其两倍数是否存在.py" />
+              <option name="titleSlug" value="check-if-n-and-its-double-exist" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[175]组合两个表.py">
           <value>
             <LeetcodeEditor>
