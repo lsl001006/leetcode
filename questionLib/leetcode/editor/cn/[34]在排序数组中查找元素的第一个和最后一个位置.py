@@ -39,36 +39,66 @@
 
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums, target):
         """
-
         :param nums:
         :param target:
         :return:
-        11222 2 22334
-        1: s=0, 112 2 22 -> 11 2 2 -> 1 1 2 e=1 -> s=0,e=1
-        2: -> 112 2 22 -> 11 2 2 -> 22 s=2 -> 222 3 34 -> 22 2 3 -> 222 e=7 -> s=2,e=7
-        3: 222 3 34 -> 334 s=8 -> 33 e=9 -> s=8,e=9
         """
-        if not nums:
-            return [-1,-1]
-        start = 0
-        end = len(nums)-1
-        mid = (start+end)//2
-        if target > end or target < start:
-            return [-1,-1]
-        tar_start = -1
-        tar_end = -1
-        # 首先把特殊情况排除
-        if nums[mid - 1] == nums[mid + 1] and nums[mid] == target:
+        n = len(nums)
+        ans = [-1, -1]
+        # 特判条件
+        # 1. nums数组长度为0
+        # 2. nums[0]小于target,或nums[-1]大于target
+        if not n or (nums[0] > target or nums[-1] < target):
+            return ans
+        if n == 1 and target == nums[0]:
+            return [0, 0]
+        # 定义左指针l, 右指针r 用以二分搜索
+        # 定义目标指针ind, 用以记录寻找到的索引值
+        l, r, ind = 0, n - 1, -1
+        while l < r:
+            mid = (l + r) // 2
+            if nums[l] == target:
+                ind = l
+                break
+            if nums[r] == target:
+                ind = r
+                break
+            # 只要找到一个目标值即可退出二分搜索循环
+            if nums[mid] == target:
+                ind = mid
+                break
+            elif nums[mid] > target:
+                r = mid
+            else:
+                l = mid + 1
+        if ind != -1:
+            l, r = ind, ind
+            # 从ind向左右搜索
+            # 1. 若l向左搜索越界，则停止向左
+            # 2. 若r向右搜索越界，则停止向右
+            while True:
+                if l < 0:
+                    l = 0
+                    break
+                if nums[l] < target:
+                    l += 1
+                    break
+                l -= 1
+            while True:
+                if r > n - 1:
+                    r = n - 1
+                    break
+                if nums[r] > target:
+                    r -= 1
+                    break
+                r += 1
+            ans = [l, r]
+        return ans
 
-        while start < end:
-            if nums[start] == target:
-                tar_start = start
-            if nums[end] == target:
-                tar_end = end
 
-
-
+if __name__ == '__main__':
+    s = Solution().searchRange([5, 7, 7, 8, 8, 10], 10)
 
 # leetcode submit region end(Prohibit modification and deletion)

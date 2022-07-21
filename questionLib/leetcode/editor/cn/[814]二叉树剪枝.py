@@ -50,13 +50,15 @@
 #         self.right = right
 class Solution:
     def pruneTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        # 终止条件
         if not root:
             return None
-        L = self.pruneTree(root.left)
-        R = self.pruneTree(root.right)
-        root.left = L
-        root.right = R
-        if root.val == 0 and not L and not R:
+        # 找出左右两个被剪枝的子树,接到root结点的左右
+        root.left = self.pruneTree(root.left)
+        root.right = self.pruneTree(root.right)
+        # 剪枝条件：
+        # 当根结点为0且左右子树为None时剪枝，返回None
+        if root.val == 0 and not root.left and not root.right:
             return None
         else:
             return root
