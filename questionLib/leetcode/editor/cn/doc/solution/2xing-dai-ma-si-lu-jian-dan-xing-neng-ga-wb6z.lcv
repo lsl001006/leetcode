@@ -1,0 +1,29 @@
+### 方便快速学习算法与理解~
+
+🌇 点赞 👍 收藏 ⭐留言 📝 一键三连 ~关注Jam，从你我做起！
+推荐 python 算法的书籍，体系化学习算法与数据结构，用正确的方式成为offer收割机
+[leetcode](https://github.com/ls1248659692/leetcode) ——  系统化快速学习各种 python 算法与书籍
+[python_guide](https://github.com/ls1248659692/python_guide) —— python 系统化的后端开发学习
+![image.png](https://pic.leetcode-cn.com/1645622615-DgbRXK-image.png)
+---------------------------------------------------------------------
+
+### 求解思路
+
+暴力破解即可，先找到数字与排序的映射关系
+
+### 代码
+
+* python
+
+```python
+class Solution(object):
+    def arrayRankTransform(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: List[int]
+        """
+        num_map = {num:idx  for idx,num in enumerate(sorted(set(arr)),1)}
+        return [num_map[num] for num in arr]
+
+```
+
