@@ -56,8 +56,6 @@
 
 # leetcode submit region begin(Prohibit modification and deletion)
 from collections import Counter
-
-
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
         ans = -1
