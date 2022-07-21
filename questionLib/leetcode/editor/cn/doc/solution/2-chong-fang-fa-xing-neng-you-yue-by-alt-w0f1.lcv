@@ -1,0 +1,153 @@
+#### 1399. 统计最大组的数目
+
+&nbsp;
+
+2 种解题方法
+
+&nbsp;
+
+## 方法一： 计数 + 排序
+
+* java
+
+```java
+class Solution {
+    public int countLargestGroup(int n) {
+
+        int max = 0;
+        if (n < 19) {
+            max = 9;
+        } else if (n < 199) {
+            max = 18;
+        } else if (n < 1999){
+            max = 27;
+        } else if (n <= 10000) {
+            max = 36;
+        }
+        int[] help = new int[max + 1];
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            dp[i] = dp[i / 10] + i % 10;
+            help[dp[i]]++;
+        }
+
+        Arrays.sort(help);
+
+        int res = 0;
+        int len = help[help.length - 1];
+        for (int i = max; i >= 0; i--) {
+            if (help[i] != len) {
+                break;
+            }
+            res++;
+        }
+
+        return res;
+    }
+}
+```
+
+&nbsp;
+
+复杂度分析：
+
+- 时间复杂度： $O(2NlogN)$
+- 空间复杂度： $O(NlogN)$
+
+&nbsp;
+
+## 方法二： 计数 + 最大数量 + 遍历
+
+省去了方法一的排序复杂度
+
+- Java
+
+* java
+
+```java
+class Solution {
+    public int countLargestGroup(int n) {
+
+        int max = 0;
+        if (n < 19) {
+            max = 9;
+        } else if (n < 199) {
+            max = 18;
+        } else if (n < 1999){
+            max = 27;
+        } else if (n <= 10000) {
+            max = 36;
+        }
+
+        int maxCount = 0;
+        int[] help = new int[max + 1];
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+
+            dp[i] = dp[i / 10] + i % 10;
+            help[dp[i]]++;
+            maxCount = Math.max(maxCount, help[dp[i]]);
+        }
+        int res = 0;
+
+        for (int i = 1; i <= max; i++) {
+            if (help[i] == maxCount) {
+                res++;
+            }
+        }
+
+        return res;
+    }
+}
+```
+
+&nbsp;
+
+- C++
+
+* c++
+
+```c++
+class Solution {
+public:
+    int countLargestGroup(int n) {
+        int m = 0;
+        if (n < 19) {
+            m = 9;
+        } else if (n < 199) {
+            m = 18;
+        } else if (n < 1999){
+            m = 27;
+        } else if (n <= 10000) {
+            m = 36;
+        }
+
+        int mCount = 0;
+        vector<int> help(m + 1);
+        vector<int> dp(n + 1);
+        for (int i = 1; i <= n; i++) {
+
+            dp[i] = dp[i / 10] + i % 10;
+            help[dp[i]]++;
+            mCount = max(mCount, help[dp[i]]);
+        }
+        int res = 0;
+
+        for (int i = 1; i <= m; i++) {
+            if (help[i] == mCount) {
+                res++;
+            }
+        }
+
+        return res;
+    }
+};
+```
+
+&nbsp;
+
+复杂度分析：
+
+- 时间复杂度 : $O(N)$
+- 空间复杂度： $O(N)$
+
