@@ -311,6 +311,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2073]买票需要的时间.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[2073]买票需要的时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2073" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2073]买票需要的时间.py" />
+              <option name="titleSlug" value="time-needed-to-buy-tickets" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2236]判断根结点是否等于子结点之和.py">
           <value>
             <LeetcodeEditor>
