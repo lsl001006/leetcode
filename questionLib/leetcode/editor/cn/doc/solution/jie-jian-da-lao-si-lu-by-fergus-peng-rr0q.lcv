@@ -1,0 +1,44 @@
+### 解题思路
+
+![tu.png](https://pic.leetcode-cn.com/1658473484-zwtocc-tu.png)
+借鉴大佬@京城打工人解题
+思路：假设第xi个区间为[s, e]，要使集合S里的元素与这个区间至少有2个元素相交，一共有三种可能的情况
+一、第xi个之前的区间与xi个区间不相交，相交元素为0，集合S要增加2个元素
+二、第xi个之前的区间与xi个区间有1个元素相交，集合S要增加1个元素
+三、第xi个之前的区间与xi个区间有2个元素相交，集合S不需要增加元素
+具体解题：
+1、将intervals按照x[0]升序，x[1]降序排序
+2、将cur, next设为排序后最后数组最后一元素的x[0], x[0]+1
+3、ans为初始集合元素个数为2
+4、遍历排序后数组的第n-2到第0个元素：
+a、如果当前元素的右边界大于等于next,说明集合不需要增加元素，直接continue
+b、如果当前元素的右边界小于cur,说明集合需要增加2个元素，且重置cur,next,
+c、如果当前元素的右边界大于等于cur并且小于next,说明集合需要增加一个元素，且重置cur,next
+
+### 代码
+
+* python3
+
+```python
+class Solution:
+    def intersectionSizeTwo(self, intervals: List[List[int]]) -> int:
+        if not intervals:
+            return 0
+        intervals.sort(key = lambda x : (x[0], -x[1]))
+        ans = 2
+        cur, next = intervals[-1][0], intervals[-1][0]+1
+        for xi, yi in reversed(intervals[:-1]):
+            if yi >= next:
+                continue
+            elif yi < cur:
+                cur = xi
+                next = xi + 1
+                ans += 2
+            elif cur <= yi < next:
+                next = cur
+                cur = xi
+                ans += 1
+        return ans
+        
+```
+
