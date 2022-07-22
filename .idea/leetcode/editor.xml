@@ -707,6 +707,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[724]寻找数组的中心下标.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[724]寻找数组的中心下标.md" />
+              <option name="frontendQuestionId" value="leetcode.cn724" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[724]寻找数组的中心下标.py" />
+              <option name="titleSlug" value="find-pivot-index" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[735]行星碰撞.py">
           <value>
             <LeetcodeEditor>
