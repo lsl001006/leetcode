@@ -1114,6 +1114,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 50]第一个只出现一次的字符.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 50]第一个只出现一次的字符.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 50" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 50]第一个只出现一次的字符.py" />
+              <option name="titleSlug" value="di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 52]两个链表的第一个公共节点.py">
           <value>
             <LeetcodeEditor>
