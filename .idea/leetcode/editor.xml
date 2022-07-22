@@ -1092,6 +1092,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 32 - III]从上到下打印二叉树 III.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 32 - III]从上到下打印二叉树 III.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 32 - III" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 32 - III]从上到下打印二叉树 III.py" />
+              <option name="titleSlug" value="cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 32 - II]从上到下打印二叉树 II.py">
           <value>
             <LeetcodeEditor>
