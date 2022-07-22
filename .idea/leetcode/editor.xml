@@ -1312,6 +1312,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 042]最近请求次数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer II 042]最近请求次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer II 042" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 042]最近请求次数.py" />
+              <option name="titleSlug" value="H8086Q" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 052]展平二叉搜索树.py">
           <value>
             <LeetcodeEditor>
