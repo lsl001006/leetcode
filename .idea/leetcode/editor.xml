@@ -729,6 +729,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[733]图像渲染.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[733]图像渲染.md" />
+              <option name="frontendQuestionId" value="leetcode.cn733" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[733]图像渲染.py" />
+              <option name="titleSlug" value="flood-fill" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[735]行星碰撞.py">
           <value>
             <LeetcodeEditor>
