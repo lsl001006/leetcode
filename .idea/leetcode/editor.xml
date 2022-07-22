@@ -1048,6 +1048,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 26]树的子结构.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 26]树的子结构.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 26" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 26]树的子结构.py" />
+              <option name="titleSlug" value="shu-de-zi-jie-gou-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 27]二叉树的镜像.py">
           <value>
             <LeetcodeEditor>
