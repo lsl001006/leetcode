@@ -476,6 +476,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[424]替换后的最长重复字符.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[424]替换后的最长重复字符.md" />
+              <option name="frontendQuestionId" value="leetcode.cn424" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[424]替换后的最长重复字符.py" />
+              <option name="titleSlug" value="longest-repeating-character-replacement" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[495]提莫攻击.py">
           <value>
             <LeetcodeEditor>
