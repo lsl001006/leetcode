@@ -54,75 +54,21 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
-from collections import Counter
-
-
 class Solution:
-    def pureAlpha(self, s):
-        for ch in s:
-            if ch.isdigit():
-                return False
-        return True
-
     def decodeString(self, s: str) -> str:
-        if self.pureAlpha(s):
-            return s
-        prev, end = '', ''
-        # 搜集前缀
-        for i in range(len(s)):
-            if s[i].isdigit():
-                break
-            prev += s[i]
-        # 更新s为去掉前缀的s
-        s = s[len(prev):]
-        # 搜集后缀
-        for i in range(len(s) - 1, 0, -1):
-            if s[i] == ']':
-                break
-            end = s[i] + end
-        if len(end) > 0:
-            s = s[:-len(end)]
-        # 给并排编码分隔开
-        mulstk = ['']  # 乘数栈
-        arrstk = []  # 字符栈
-        signstk = []  # 括号栈
-        tmparr = ''
-        for i in range(len(s)):
-            # 符号栈为空且为数字字符时
-            if signstk == [] and s[i].isdigit():
-                if tmparr != '':
-                    mulstk[-1] = '1'
-                    mulstk.append('')
-                    arrstk.append(tmparr)
-                    tmparr = ''
-                mulstk[-1] += s[i]
-                continue
+        stack, res, multi = [], "", 0
+        for c in s:
+            if c == '[':
+                stack.append([multi, res])
+                res, multi = "", 0
+            elif c == ']':
+                cur_multi, last_res = stack.pop()
+                res = last_res + cur_multi * res
+            elif c.isdigit():
+                multi = multi * 10 + int(c)
+            else:
+                res += c
+        return res
 
-            if s[i] == '[':
-                # 若符号栈不为空
-                if signstk:
-                    tmparr += '['
-                else:
-                    mulstk.append('')
-                signstk.append(s[i])
-                continue
-
-            if s[i] == ']':
-                if len(signstk) > 1:
-                    signstk.pop()
-                    tmparr += ']'
-                else:
-                    signstk.pop()  # 此刻栈应被清空
-                    arrstk.append(tmparr)  # 括号里的全部字符写入完成，加入arrstk
-                    tmparr = ''  # 清空临时字符串
-                continue
-            # 进行到此处，仅有括号里的数字与字母
-            tmparr += s[i]
-
-        fullstr = prev
-        for i in range(len(arrstk)):
-            fullstr += int(mulstk[i]) * self.decodeString(arrstk[i])
-        fullstr += end
-        return fullstr
 
 # leetcode submit region end(Prohibit modification and deletion)
