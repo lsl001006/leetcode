@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1046]最后一块石头的重量.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1046]最后一块石头的重量.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1046" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1046]最后一块石头的重量.py" />
+              <option name="titleSlug" value="last-stone-weight" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1047]删除字符串中的所有相邻重复项.py">
           <value>
             <LeetcodeEditor>
