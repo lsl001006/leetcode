@@ -1521,6 +1521,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 115]重建序列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer II 115]重建序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer II 115" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 115]重建序列.py" />
+              <option name="titleSlug" value="ur2n8P" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[面试题 02.01]移除重复节点.py">
           <value>
             <LeetcodeEditor>
