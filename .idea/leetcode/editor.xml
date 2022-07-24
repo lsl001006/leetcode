@@ -1125,6 +1125,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 03]数组中重复的数字.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 03]数组中重复的数字.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 03" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 03]数组中重复的数字.py" />
+              <option name="titleSlug" value="shu-zu-zhong-zhong-fu-de-shu-zi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 06]从尾到头打印链表.py">
           <value>
             <LeetcodeEditor>
@@ -1158,6 +1169,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 11]旋转数组的最小数字.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 11]旋转数组的最小数字.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 11" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 11]旋转数组的最小数字.py" />
+              <option name="titleSlug" value="xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 13]机器人的运动范围.py">
           <value>
             <LeetcodeEditor>
@@ -1166,6 +1188,28 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 13]机器人的运动范围.py" />
               <option name="titleSlug" value="ji-qi-ren-de-yun-dong-fan-wei-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 15]二进制中1的个数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 15]二进制中1的个数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 15" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 15]二进制中1的个数.py" />
+              <option name="titleSlug" value="er-jin-zhi-zhong-1de-ge-shu-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 17]打印从1到最大的n位数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 17]打印从1到最大的n位数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 17" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 17]打印从1到最大的n位数.py" />
+              <option name="titleSlug" value="da-yin-cong-1dao-zui-da-de-nwei-shu-lcof" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1199,6 +1243,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 20]表示数值的字符串.py" />
               <option name="titleSlug" value="biao-shi-shu-zhi-de-zi-fu-chuan-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 21]调整数组顺序使奇数位于偶数前面.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 21]调整数组顺序使奇数位于偶数前面.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 21" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 21]调整数组顺序使奇数位于偶数前面.py" />
+              <option name="titleSlug" value="diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof" />
             </LeetcodeEditor>
           </value>
         </entry>
