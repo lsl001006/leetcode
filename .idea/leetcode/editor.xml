@@ -113,6 +113,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1184]公交站间的距离.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1184]公交站间的距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1184" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1184]公交站间的距离.py" />
+              <option name="titleSlug" value="distance-between-bus-stops" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1189]“气球” 的最大数量.py">
           <value>
             <LeetcodeEditor>
