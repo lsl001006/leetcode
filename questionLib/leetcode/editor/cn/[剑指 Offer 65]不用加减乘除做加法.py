@@ -22,10 +22,11 @@
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
     def add(self, a: int, b: int) -> int:
+        # 二进制加法
         x = 0xffffffff
         a, b = a & x, b & x
         while b != 0:
             a, b = (a ^ b), (a & b) << 1 & x
         return a if a <= 0x7fffffff else ~(a ^ x)
-
+        
 # leetcode submit region end(Prohibit modification and deletion)
