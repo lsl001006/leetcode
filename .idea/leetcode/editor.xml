@@ -421,6 +421,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[234]回文链表.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[234]回文链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn234" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[234]回文链表.py" />
+              <option name="titleSlug" value="palindrome-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[23]合并K个升序链表.py">
           <value>
             <LeetcodeEditor>
@@ -539,6 +550,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[394]字符串解码.py" />
               <option name="titleSlug" value="decode-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[39]组合总和.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[39]组合总和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn39" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[39]组合总和.py" />
+              <option name="titleSlug" value="combination-sum" />
             </LeetcodeEditor>
           </value>
         </entry>
