@@ -1,0 +1,26 @@
+![6666666.png](https://pic.leetcode-cn.com/1658845426-WNJYxr-6666666.png)
+
+双指针，我的理解是快慢指针（也就是表示奇偶的指针），关键是搞清楚他们的顺序先奇数，再偶数
+
+* python3
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head : return head
+        evenhead = head.next
+        odd,even = head,evenhead
+        while even and even.next:
+            odd.next = even.next  #  odd的下一个节点要指向even的下一个节点
+            odd = odd.next        #  更新odd的节点位置，位于even节点之后
+            even.next = odd.next  #  同理偶节点开始操作
+            even = even.next
+        odd.next = evenhead
+        return head
+```
+
