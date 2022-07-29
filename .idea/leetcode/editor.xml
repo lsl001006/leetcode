@@ -289,6 +289,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[148]排序链表.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[148]排序链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn148" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[148]排序链表.py" />
+              <option name="titleSlug" value="sort-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1700]无法吃午餐的学生数量.py">
           <value>
             <LeetcodeEditor>
@@ -484,6 +495,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[31]下一个排列.py" />
               <option name="titleSlug" value="next-permutation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[328]奇偶链表.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[328]奇偶链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn328" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[328]奇偶链表.py" />
+              <option name="titleSlug" value="odd-even-linked-list" />
             </LeetcodeEditor>
           </value>
         </entry>
