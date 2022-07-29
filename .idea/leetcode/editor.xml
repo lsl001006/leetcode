@@ -399,6 +399,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2131]连接两字母单词得到的最长回文串.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[2131]连接两字母单词得到的最长回文串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2131" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2131]连接两字母单词得到的最长回文串.py" />
+              <option name="titleSlug" value="longest-palindrome-by-concatenating-two-letter-words" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[2236]判断根结点是否等于子结点之和.py">
           <value>
             <LeetcodeEditor>
