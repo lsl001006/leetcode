@@ -267,6 +267,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1403]非递增顺序的最小子序列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1403]非递增顺序的最小子序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1403" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1403]非递增顺序的最小子序列.py" />
+              <option name="titleSlug" value="minimum-subsequence-in-non-increasing-order" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[142]环形链表 II.py">
           <value>
             <LeetcodeEditor>

@@ -1,0 +1,88 @@
+## 树的遍历 + DFS
+
+一个朴素的做法是搜索以每个节点为根的（往下的）所有路径，并对路径总和为 $targetSum$ 的路径进行累加统计。
+
+使用 `dfs1` 来搜索所有节点，复杂度为 $O(n)$；在 `dfs1` 中对于每个当前节点，使用 `dfs2` 搜索以其为根的所有（往下的）路径，同时累加路径总和为 $targetSum$ 的所有路径，复杂度为 $O(n)$。
+
+整体复杂度为 $O(n^2)$，数据范围为 $10^3$，可以过。
+
+代码：
+
+* []
+
+```Java
+class Solution {
+    int ans, t;
+    public int pathSum(TreeNode root, int _t) {
+        t = _t;
+        dfs1(root);
+        return ans;
+    }
+    void dfs1(TreeNode root) {
+        if (root == null) return;
+        dfs2(root, root.val);
+        dfs1(root.left);
+        dfs1(root.right);
+    }
+    void dfs2(TreeNode root, int val) {
+        if (val == t) ans++;
+        if (root.left != null) dfs2(root.left, val + root.left.val);
+        if (root.right != null) dfs2(root.right, val + root.right.val);
+    }
+}
+```
+
+* 时间复杂度：$O(n^2)$
+* 空间复杂度：忽略递归带来的额外空间开销，复杂度为 $O(1)$
+
+---
+
+## 树的遍历 + 前缀和
+
+在「解法一」中，我们统计的是以每个节点为根的（往下的）所有路径，也就是说统计的是以每个节点为「路径开头」的所有合法路径。
+
+**本题的一个优化切入点为「路径只能往下」，因此如果我们转换一下，统计以每个节点为「路径结尾」的合法数量的话，配合原本就是「从上往下」进行的数的遍历（最完整的路径必然是从原始根节点到当前节点的唯一路径），相当于只需要在完整路径中找到有多少个节点到当前节点的路径总和为 $targetSum$。**
+
+**于是这个树上问题彻底转换一维问题：求解从原始起点（根节点）到当前节点 $b$ 的路径中，有多少节点 $a$ 满足 $sum[a...b] = targetSum$，由于从原始起点（根节点）到当前节点的路径唯一，因此这其实是一个「一维前缀和」问题。**
+
+具体的，我们可以在进行树的遍历时，记录下从原始根节点 $root$ 到当前节点 $cur$ 路径中，从 $root$ 到任意中间节点 $x$ 的路径总和，配合哈希表，快速找到满足以 $cur$ 为「路径结尾」的、使得路径总和为 $targetSum$ 的目标「路径起点」有多少个。
+
+> 一些细节：由于我们只能统计往下的路径，但是树的遍历会同时搜索两个方向的子树。因此我们应当在搜索完以某个节点为根的左右子树之后，应当回溯地将路径总和从哈希表中删除，防止统计到跨越两个方向的路径。
+
+代码：
+
+* []
+
+```Java
+class Solution {
+    Map<Integer, Integer> map = new HashMap<>();
+    int ans, t;
+    public int pathSum(TreeNode root, int _t) {
+        if (root == null) return 0;
+        t = _t;
+        map.put(0, 1);
+        dfs(root, root.val);
+        return ans;
+    }
+    void dfs(TreeNode root, int val) {
+        if (map.containsKey(val - t)) ans += map.get(val - t);
+        map.put(val, map.getOrDefault(val, 0) + 1);
+        if (root.left != null) dfs(root.left, val + root.left.val);
+        if (root.right != null) dfs(root.right, val + root.right.val);
+        map.put(val, map.getOrDefault(val, 0) - 1);
+    }
+}
+```
+
+* 时间复杂度：$O(n)$
+* 空间复杂度：$O(n)$
+
+---
+
+## 最后
+
+**如果有帮助到你，请给题解点个赞和收藏，让更多的人看到 ~ ("▔□▔)/**
+
+也欢迎你 [关注我](https://oscimg.oschina.net/oscnet/up-19688dc1af05cf8bdea43b2a863038ab9e5.png)（公主号后台回复「送书」即可参与长期看题解学算法送实体书活动）或 加入[「组队打卡」](https://leetcode-cn.com/u/ac_oier/)小群 ，提供写「证明」&「思路」的高质量题解。
+
+所有题解已经加入 [刷题指南](https://github.com/SharingSource/LogicStack-LeetCode/wiki)，欢迎 star 哦 ~
