@@ -42,15 +42,25 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from collections import defaultdict
+
+
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        prefix, ans = [], 0
-        if not root:
-            return 0
+        prefix = defaultdict(int)
+        prefix[0] = 1
 
-        def dfs(node, target):
+        def dfs(node, cur):
             if not node:
                 return 0
-            if node.val = prefix
+            ans = 0
+            cur += node.val
+            ans += prefix[cur - targetSum]
+            prefix[cur] += 1
+            ans += dfs(node.left, cur)
+            ans += dfs(node.right, cur)
+            prefix[cur] -= 1
+            return ans
 
+        return dfs(root, 0)
 # leetcode submit region end(Prohibit modification and deletion)

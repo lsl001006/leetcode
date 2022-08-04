@@ -1,0 +1,84 @@
+**[437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/)**
+
+### 解题思路
+
+只需一次递归五行代码，用列表记录下当前结果即可，为什么要双重递归呢？
+
+1. `sumlist[]`记录当前路径上的和，在如下样例中：
+
+             10
+            /  \
+           5   -3
+          / \    \
+         3   2   11
+        / \   \
+       3  -2   1
+
+当DFS刚走到`2`时，此时`sumlist[]`从根节点`10`到`2`的变化过程为：
+
+    10
+    15 5
+    17 7 2
+
+当DFS继续走到`1`时，此时`sumlist[]`从节点`2`到`1`的变化为：
+
+    18 8 3 1   
+
+因此，只需计算每一步中，sum在数组sumlist中出现的次数，然后与每一轮递归的结果相加即可
+
+2. `count = sumlist.count(sum)`等价于：
+
+       count = 0
+       for num in sumlist:
+           if num == sum:
+               count += 1
+
+count计算本轮sum在数组sumlist中出现的次数
+
+### 代码
+
+* python3
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+
+# 精简版，五行代码不解释
+class Solution:
+    def pathSum(self, root: TreeNode, sum: int) -> int:
+        def dfs(root, sumlist):
+            if root is None: return 0
+            sumlist = [num + root.val for num in sumlist] + [root.val]
+            return sumlist.count(sum) + dfs(root.left, sumlist) + dfs(root.right, sumlist)
+        return dfs(root, [])
+
+
+
+# 展开版，易理解
+class Solution:
+    def pathSum(self, root: TreeNode, sum: int) -> int:
+
+        def dfs(root, sumlist):
+            if root is None:
+                return 0
+            
+            sumlist = [num+root.val for num in sumlist]
+            sumlist.append(root.val)
+            
+            count = 0
+            for num in sumlist:
+                if num == sum:
+                    count += 1
+            # count = sumlist.count(sum)
+
+            return count + dfs(root.left, sumlist) + dfs(root.right, sumlist)
+
+        return dfs(root, [])
+
+```
+
