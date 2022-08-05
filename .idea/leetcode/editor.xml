@@ -245,6 +245,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1376]通知所有员工所需的时间.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1376]通知所有员工所需的时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1376" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1376]通知所有员工所需的时间.py" />
+              <option name="titleSlug" value="time-needed-to-inform-all-employees" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1394]找出数组中的幸运数.py">
           <value>
             <LeetcodeEditor>
