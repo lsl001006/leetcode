@@ -289,6 +289,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1408]数组中的字符串匹配.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1408]数组中的字符串匹配.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1408" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1408]数组中的字符串匹配.py" />
+              <option name="titleSlug" value="string-matching-in-an-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[142]环形链表 II.py">
           <value>
             <LeetcodeEditor>
@@ -1045,6 +1056,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[706]设计哈希映射.py" />
               <option name="titleSlug" value="design-hashmap" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[713]乘积小于 K 的子数组.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[713]乘积小于 K 的子数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn713" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[713]乘积小于 K 的子数组.py" />
+              <option name="titleSlug" value="subarray-product-less-than-k" />
             </LeetcodeEditor>
           </value>
         </entry>
