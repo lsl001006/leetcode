@@ -575,6 +575,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[304]二维区域和检索 - 矩阵不可变.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[304]二维区域和检索 - 矩阵不可变.md" />
+              <option name="frontendQuestionId" value="leetcode.cn304" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[304]二维区域和检索 - 矩阵不可变.py" />
+              <option name="titleSlug" value="range-sum-query-2d-immutable" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[30]串联所有单词的子串.py">
           <value>
             <LeetcodeEditor>
