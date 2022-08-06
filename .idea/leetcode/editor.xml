@@ -322,6 +322,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[143]重排链表.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[143]重排链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn143" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[143]重排链表.py" />
+              <option name="titleSlug" value="reorder-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1480]一维数组的动态和.py">
           <value>
             <LeetcodeEditor>
