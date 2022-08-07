@@ -784,6 +784,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[445]两数相加 II.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[445]两数相加 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn445" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[445]两数相加 II.py" />
+              <option name="titleSlug" value="add-two-numbers-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[495]提莫攻击.py">
           <value>
             <LeetcodeEditor>
@@ -2035,6 +2046,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 024]反转链表.py" />
               <option name="titleSlug" value="UHnkqh" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 025]链表中的两数相加.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer II 025]链表中的两数相加.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer II 025" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 025]链表中的两数相加.py" />
+              <option name="titleSlug" value="lMSNwu" />
             </LeetcodeEditor>
           </value>
         </entry>
