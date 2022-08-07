@@ -1004,6 +1004,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[636]函数的独占时间.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[636]函数的独占时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn636" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[636]函数的独占时间.py" />
+              <option name="titleSlug" value="exclusive-time-of-functions" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[637]二叉树的层平均值.py">
           <value>
             <LeetcodeEditor>
