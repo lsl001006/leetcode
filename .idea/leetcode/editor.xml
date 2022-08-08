@@ -1356,6 +1356,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[761]特殊的二进制序列.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[761]特殊的二进制序列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn761" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[761]特殊的二进制序列.py" />
+              <option name="titleSlug" value="special-binary-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[76]最小覆盖子串.py">
           <value>
             <LeetcodeEditor>
