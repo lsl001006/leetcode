@@ -70,21 +70,22 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from collections import deque
 class BSTIterator:
 
     def __init__(self, root: Optional[TreeNode]):
-        self.stk = []
-        while root:
-            self.stk.append(root)
-            root = root.left
+        self.stk = deque()
+        self.inorder(root)
+
+    def inorder(self, root):
+        if not root:
+            return None
+        self.inorder(root.left)
+        self.stk.append(root.val)
+        self.inorder(root.right)
 
     def next(self) -> int:
-        cur = self.stk.pop()
-        node = cur.right
-        while node:
-            self.stk.append(node)
-            node = node.left
-        return cur.val
+        return self.stk.popleft()
 
     def hasNext(self) -> bool:
         return len(self.stk) > 0
