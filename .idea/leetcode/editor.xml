@@ -322,6 +322,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1413]逐步求和得到正数的最小值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1413]逐步求和得到正数的最小值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1413" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1413]逐步求和得到正数的最小值.py" />
+              <option name="titleSlug" value="minimum-value-to-get-positive-step-by-step-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[142]环形链表 II.py">
           <value>
             <LeetcodeEditor>
@@ -1078,6 +1089,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[575]分糖果.py" />
               <option name="titleSlug" value="distribute-candies" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[57]插入区间.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[57]插入区间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn57" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[57]插入区间.py" />
+              <option name="titleSlug" value="insert-interval" />
             </LeetcodeEditor>
           </value>
         </entry>
