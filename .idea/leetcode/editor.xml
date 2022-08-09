@@ -2049,6 +2049,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 46]把数字翻译成字符串.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 46]把数字翻译成字符串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 46" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 46]把数字翻译成字符串.py" />
+              <option name="titleSlug" value="ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 50]第一个只出现一次的字符.py">
           <value>
             <LeetcodeEditor>
