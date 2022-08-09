@@ -465,6 +465,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1845]座位预约管理系统.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[1845]座位预约管理系统.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1845" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1845]座位预约管理系统.py" />
+              <option name="titleSlug" value="seat-reservation-manager" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[18]四数之和.py">
           <value>
             <LeetcodeEditor>
