@@ -2060,6 +2060,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 47]礼物的最大价值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 47]礼物的最大价值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 47" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 47]礼物的最大价值.py" />
+              <option name="titleSlug" value="li-wu-de-zui-da-jie-zhi-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 50]第一个只出现一次的字符.py">
           <value>
             <LeetcodeEditor>
