@@ -28,14 +28,15 @@
 
 # leetcode submit region begin(Prohibit modification and deletion)
 class Solution:
-    def maxValue(self, grid: list[list[int]]) -> int:
+    def maxValue(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
-        grid = [[0] * (n + 1)] + grid
-        for i in range(m + 1):
-            grid[i].insert(0, 0)
-
-        for i in range(1, m + 1):
-            for j in range(1, n + 1):
-                grid[i][j] += max(grid[i - 1][j], grid[i][j - 1])
+        for j in range(1, n):  # 初始化第一行
+            grid[0][j] += grid[0][j - 1]
+        for i in range(1, m):  # 初始化第一列
+            grid[i][0] += grid[i - 1][0]
+        for i in range(1, m):
+            for j in range(1, n):
+                grid[i][j] += max(grid[i][j - 1], grid[i - 1][j])
         return grid[-1][-1]
+
 # leetcode submit region end(Prohibit modification and deletion)
