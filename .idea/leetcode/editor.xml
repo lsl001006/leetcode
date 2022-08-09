@@ -1268,6 +1268,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[640]求解方程.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[640]求解方程.md" />
+              <option name="frontendQuestionId" value="leetcode.cn640" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[640]求解方程.py" />
+              <option name="titleSlug" value="solve-the-equation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[645]错误的集合.py">
           <value>
             <LeetcodeEditor>
