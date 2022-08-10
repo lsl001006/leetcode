@@ -597,6 +597,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[227]基本计算器 II.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[227]基本计算器 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn227" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[227]基本计算器 II.py" />
+              <option name="titleSlug" value="basic-calculator-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[230]二叉搜索树中第K小的元素.py">
           <value>
             <LeetcodeEditor>
@@ -2376,6 +2387,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 027]回文链表.py" />
               <option name="titleSlug" value="aMhZSa" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 037]小行星碰撞.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer II 037]小行星碰撞.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer II 037" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer II 037]小行星碰撞.py" />
+              <option name="titleSlug" value="XagZNi" />
             </LeetcodeEditor>
           </value>
         </entry>
