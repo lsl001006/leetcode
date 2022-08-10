@@ -45,27 +45,31 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+from typing import List
+
+
 class Solution:
-    def __init__(self):
-        self.ans = []
-
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        if target < min(candidates):
-            return self.ans
-        n, map = len(candidates), {}
-        skip = []
-        for i in range(n):
-            if (k := candidates[i]) == target:
-                self.ans.append([k])
-            if k not in map:
-                map[target - k] = i
-            else:
-                skip += [i, map[k]]
-                self.ans.append([candidates[skip[-2]], candidates[skip[-1]]])
 
-        for i in range(n):
-            if i not in skip:
-                self.combinationSum(candidates, target - candidates[i])
-        return self.ans
+        def dfs(candidates, begin, size, path, res, target):
+            if target == 0:
+                res.append(path)
+                return
+
+            for index in range(begin, size):
+                residue = target - candidates[index]
+                if residue < 0:
+                    break
+
+                dfs(candidates, index, size, path + [candidates[index]], res, residue)
+
+        size = len(candidates)
+        if size == 0:
+            return []
+        candidates.sort()
+        path = []
+        res = []
+        dfs(candidates, 0, size, path, res, target)
+        return res
 
 # leetcode submit region end(Prohibit modification and deletion)

@@ -2324,6 +2324,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 63]股票的最大利润.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 63]股票的最大利润.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 63" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 63]股票的最大利润.py" />
+              <option name="titleSlug" value="gu-piao-de-zui-da-li-run-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 65]不用加减乘除做加法.py">
           <value>
             <LeetcodeEditor>
