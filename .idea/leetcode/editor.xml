@@ -2291,6 +2291,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 60]n个骰子的点数.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[剑指 Offer 60]n个骰子的点数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn剑指 Offer 60" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 60]n个骰子的点数.py" />
+              <option name="titleSlug" value="nge-tou-zi-de-dian-shu-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[剑指 Offer 61]扑克牌中的顺子.py">
           <value>
             <LeetcodeEditor>
