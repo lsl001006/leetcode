@@ -1719,6 +1719,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[947]移除最多的同行或同列石头.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[947]移除最多的同行或同列石头.md" />
+              <option name="frontendQuestionId" value="leetcode.cn947" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[947]移除最多的同行或同列石头.py" />
+              <option name="titleSlug" value="most-stones-removed-with-same-row-or-column" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[961]在长度 2N 的数组中找出重复 N 次的元素.py">
           <value>
             <LeetcodeEditor>
