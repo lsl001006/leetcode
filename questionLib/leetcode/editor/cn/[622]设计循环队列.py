@@ -46,34 +46,48 @@
 
 # leetcode submit region begin(Prohibit modification and deletion)
 class MyCircularQueue:
+
     def __init__(self, k: int):
-        self.front = self.rear = 0
-        self.elements = [0] * (k + 1)
+        self.num = k
+        self.queue = []
+        self.left = 0  # 队首
+        self.right = 0  # 队尾
 
     def enQueue(self, value: int) -> bool:
-        if self.isFull():
+        if self.isFull():  # 满元素
             return False
-        self.elements[self.rear] = value
-        self.rear = (self.rear + 1) % len(self.elements)
+        # 加入元素
+        self.isEmpty()  # 如果队列为空，复位队尾和队首
+        self.queue.append(value)
+        self.right += 1  # 队尾后移1
         return True
 
     def deQueue(self) -> bool:
-        if self.isEmpty():
+        if self.isEmpty():  # 空队列
             return False
-        self.front = (self.front + 1) % len(self.elements)
+        self.left += 1  # 队首后移
         return True
 
     def Front(self) -> int:
-        return -1 if self.isEmpty() else self.elements[self.front]
+        if self.isEmpty():
+            return -1
+        res = self.queue[self.left]  # 取出队首元素
+        return res
 
     def Rear(self) -> int:
-        return -1 if self.isEmpty() else self.elements[(self.rear - 1) % len(self.elements)]
+        if self.isEmpty():
+            return -1
+        res = self.queue[self.right - 1]  # 取出队尾元素
+        return res
 
     def isEmpty(self) -> bool:
-        return self.rear == self.front
+        if self.right == self.left:
+            self.left, self.right, self.queue = 0, 0, []  # 初始化为0
+            return True
+        return False
 
     def isFull(self) -> bool:
-        return (self.rear + 1) % len(self.elements) == self.front
+        return (self.right - self.left) == self.num
 
 # Your MyCircularQueue object will be instantiated and called as such:
 # obj = MyCircularQueue(k)
