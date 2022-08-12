@@ -43,7 +43,51 @@
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
+import copy
+from collections import defaultdict
+
+
 class Solution:
-    def findSubstring(self, s: str, words: List[str]) -> List[int]:
+    def findSubstring(self, s: str, words: list[str]) -> list[int]:
+        hashkeys = defaultdict(int)
+        heads, tails = set(), set()
+        for w in words:
+            hashkeys[w] += 1
+            heads.add(w[0])
+            tails.add(w[-1])
+        stride = len(words[0])
+        n, m = len(s), len(words)
+        l, r, ans = 0, 0, []
+        while r < n:
+            if s[r] in heads:
+                l = r
+                r += stride * m
+                if r > n:
+                    break
+                curString = s[l:r]
+                # print(l, r, curString, hashkeys)
+                hkeys = copy.deepcopy(hashkeys)
+                ind = l if self.cutAndPair(curString, hkeys, stride) else -1
+                if ind != -1:
+                    ans.append(ind)
+                r = l
+            r += 1
+        return ans
+
+    def cutAndPair(self, string, hkeys, stride):
+        n, l, r = len(string), 0, stride - 1
+
+        while r < n:
+            if (ss := string[l:r + 1]) in hkeys:
+                # print(l, r, ss)
+                hkeys[ss] -= 1
+                l += stride
+                r += stride
+            else:
+                return False
+        for k, v in hkeys.items():
+            if v != 0:
+                return False
+        return True
 
 # leetcode submit region end(Prohibit modification and deletion)
