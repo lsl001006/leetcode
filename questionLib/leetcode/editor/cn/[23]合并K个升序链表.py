@@ -54,9 +54,20 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        if not list:
-            return []
-        prehead = ListNode(-1)
-        prev = prehead
-
+        # sol1 暴力
+        if not lists:
+            return None
+        ans = []
+        for node in lists:
+            cur = node
+            while cur:
+                ans.append(cur.val)
+                cur = cur.next
+        ans.sort()
+        if len(ans) < 1:
+            return None
+        ans[-1] = ListNode(ans[-1])
+        for i in range(len(ans) - 2, -1, -1):
+            ans[i] = ListNode(ans[i], ans[i + 1])
+        return ans[0]
 # leetcode submit region end(Prohibit modification and deletion)
