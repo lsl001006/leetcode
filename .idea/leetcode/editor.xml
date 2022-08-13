@@ -432,6 +432,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[162]寻找峰值.py">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/doc/content/[162]寻找峰值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn162" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[162]寻找峰值.py" />
+              <option name="titleSlug" value="find-peak-element" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/questionLib/leetcode/editor/cn/[1700]无法吃午餐的学生数量.py">
           <value>
             <LeetcodeEditor>
