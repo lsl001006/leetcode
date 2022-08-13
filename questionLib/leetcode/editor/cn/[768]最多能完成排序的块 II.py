@@ -46,14 +46,21 @@
 class Solution:
     def maxChunksToSorted(self, arr: [int]) -> int:
         stack = []
+        # 单调递增栈
         for num in arr:
+            # 如果num比单调递增栈栈顶还小，则寻找栈内第一个比num小的元素，其余比num大的栈内元素都被归为一“块”
             if stack and num < stack[-1]:
+                # 为维护单调栈的单调性，需要保存其栈顶元素(当前最大值)
                 head = stack.pop()
                 while stack and num < stack[-1]:
                     stack.pop()
+                # 当stack中所有比num小的元素被清空，将栈顶元素重新接回去
+                # 由于栈顶元素大于num，为维护单调栈，则num不再加入单调栈中
                 stack.append(head)
             else:
+                # 若num>=stack[-1]或stack为空，则加入此时num大于栈中出现过的所有元素，可以成为一”块“
                 stack.append(num)
+        # 栈的长度即为最大块数
         return len(stack)
 
 # leetcode submit region end(Prohibit modification and deletion)
